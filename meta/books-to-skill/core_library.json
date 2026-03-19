@@ -1,0 +1,1044 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-03-18",
+  "total_books": 98,
+  "domains": [
+    {
+      "domain_id": "marketing",
+      "domain_name": "营销与品牌",
+      "domain_name_en": "Marketing & Branding",
+      "description": "品牌定位、内容营销、传播策略、用户心理、转化优化",
+      "books": [
+        {
+          "id": "mkt-001",
+          "title": "Positioning: The Battle for Your Mind",
+          "title_zh": "定位",
+          "author": "Al Ries & Jack Trout",
+          "year": 1981,
+          "core_framework": "定位四步法",
+          "framework_tags": ["品牌定位", "心智占位", "品类战略"],
+          "best_for": ["品牌定位", "竞争差异化", "品类策略"],
+          "reference_file": "positioning.md"
+        },
+        {
+          "id": "mkt-002",
+          "title": "Contagious: Why Things Catch On",
+          "title_zh": "疯传",
+          "author": "Jonah Berger",
+          "year": 2013,
+          "core_framework": "STEPPS 传播模型",
+          "framework_tags": ["社交货币", "触发器", "情绪", "公共性", "实用价值", "故事"],
+          "best_for": ["爆款分析", "内容策划", "社交传播"],
+          "reference_file": "contagious.md"
+        },
+        {
+          "id": "mkt-003",
+          "title": "Made to Stick: Why Some Ideas Survive and Others Die",
+          "title_zh": "让创意更有黏性",
+          "author": "Chip Heath & Dan Heath",
+          "year": 2007,
+          "core_framework": "SUCCESs 粘性法则",
+          "framework_tags": ["简单", "意外", "具体", "可信", "情感", "故事"],
+          "best_for": ["文案优化", "卖点表达", "演讲设计"],
+          "reference_file": "made-to-stick.md"
+        },
+        {
+          "id": "mkt-004",
+          "title": "Building a StoryBrand",
+          "title_zh": "你的顾客需要一个好故事",
+          "author": "Donald Miller",
+          "year": 2017,
+          "core_framework": "SB7 品牌故事框架",
+          "framework_tags": ["品牌叙事", "客户为主角", "导师角色"],
+          "best_for": ["官网文案", "品牌介绍", "Campaign策划"],
+          "reference_file": "storybrand.md"
+        },
+        {
+          "id": "mkt-005",
+          "title": "Influence: The Psychology of Persuasion",
+          "title_zh": "影响力",
+          "author": "Robert Cialdini",
+          "year": 1984,
+          "core_framework": "六大影响力原则",
+          "framework_tags": ["互惠", "承诺一致", "社会认同", "喜好", "权威", "稀缺"],
+          "best_for": ["转化优化", "促销策略", "销售话术"],
+          "reference_file": "influence.md"
+        },
+        {
+          "id": "mkt-006",
+          "title": "Purple Cow: Transform Your Business by Being Remarkable",
+          "title_zh": "紫牛",
+          "author": "Seth Godin",
+          "year": 2003,
+          "core_framework": "紫牛思维",
+          "framework_tags": ["产品差异化", "Remarkable", "Sneezers"],
+          "best_for": ["产品差异化", "新品策划", "创新定位"],
+          "reference_file": "purple-cow.md"
+        },
+        {
+          "id": "mkt-007",
+          "title": "$100M Offers: How to Make Offers So Good People Feel Stupid Saying No",
+          "title_zh": "价值一亿的报价",
+          "author": "Alex Hormozi",
+          "year": 2021,
+          "core_framework": "价值方程式 + 报价堆叠",
+          "framework_tags": ["价值包装", "定价策略", "报价设计"],
+          "best_for": ["定价策略", "产品包装", "转化提升"],
+          "reference_file": "100m-offers.md"
+        },
+        {
+          "id": "mkt-008",
+          "title": "Hooked: How to Build Habit-Forming Products",
+          "title_zh": "上瘾",
+          "author": "Nir Eyal",
+          "year": 2014,
+          "core_framework": "Hook 四步循环",
+          "framework_tags": ["触发", "行动", "可变奖赏", "投入"],
+          "best_for": ["产品留存", "用户粘性", "行为设计"],
+          "reference_file": "hooked.md"
+        },
+        {
+          "id": "mkt-009",
+          "title": "They Ask, You Answer",
+          "title_zh": "他们问，你回答",
+          "author": "Marcus Sheridan",
+          "year": 2017,
+          "core_framework": "Big 5 内容策略 + 内容飞轮",
+          "framework_tags": ["内容营销", "信任建设", "SEO"],
+          "best_for": ["内容策略", "SEO获客", "品牌信任"],
+          "reference_file": "they-ask-you-answer.md"
+        }
+      ]
+    },
+    {
+      "domain_id": "strategy",
+      "domain_name": "战略咨询",
+      "domain_name_en": "Strategy",
+      "description": "竞争战略、商业模式、增长路径、创新与颠覆",
+      "books": [
+        {
+          "id": "str-001",
+          "title": "Competitive Strategy",
+          "title_zh": "竞争战略",
+          "author": "Michael Porter",
+          "year": 1980,
+          "core_framework": "五力模型 + 三大通用战略",
+          "framework_tags": ["五力分析", "成本领先", "差异化", "聚焦"],
+          "best_for": ["行业分析", "竞争格局", "战略选择"]
+        },
+        {
+          "id": "str-002",
+          "title": "Blue Ocean Strategy",
+          "title_zh": "蓝海战略",
+          "author": "W. Chan Kim & Renée Mauborgne",
+          "year": 2005,
+          "core_framework": "价值创新 + 战略画布 + 四步动作框架",
+          "framework_tags": ["蓝海", "价值创新", "消除-减少-增加-创造"],
+          "best_for": ["新市场开拓", "差异化战略", "避开红海竞争"]
+        },
+        {
+          "id": "str-003",
+          "title": "Good Strategy Bad Strategy",
+          "title_zh": "好战略，坏战略",
+          "author": "Richard Rumelt",
+          "year": 2011,
+          "core_framework": "战略内核（诊断-指导方针-连贯行动）",
+          "framework_tags": ["战略诊断", "聚焦", "连贯行动"],
+          "best_for": ["战略制定", "战略评估", "避免假战略"]
+        },
+        {
+          "id": "str-004",
+          "title": "The Innovator's Dilemma",
+          "title_zh": "创新者的窘境",
+          "author": "Clayton Christensen",
+          "year": 1997,
+          "core_framework": "颠覆式创新理论",
+          "framework_tags": ["颠覆式创新", "延续性创新", "价值网络"],
+          "best_for": ["创新战略", "应对颠覆", "技术决策"]
+        },
+        {
+          "id": "str-005",
+          "title": "Zero to One",
+          "title_zh": "从0到1",
+          "author": "Peter Thiel",
+          "year": 2014,
+          "core_framework": "垂直进步思维 + 垄断理论",
+          "framework_tags": ["从0到1", "垄断", "逆向思考", "秘密"],
+          "best_for": ["创业战略", "商业模式设计", "差异化思维"]
+        },
+        {
+          "id": "str-006",
+          "title": "Playing to Win: How Strategy Really Works",
+          "title_zh": "竞争优势",
+          "author": "A.G. Lafley & Roger Martin",
+          "year": 2013,
+          "core_framework": "战略选择级联（5个关键问题）",
+          "framework_tags": ["战略选择", "在哪里竞争", "如何赢"],
+          "best_for": ["战略规划", "业务选择", "竞争优势构建"]
+        }
+      ]
+    },
+    {
+      "domain_id": "management",
+      "domain_name": "管理与组织",
+      "domain_name_en": "Management & Organization",
+      "description": "团队管理、目标设定、组织文化、执行力",
+      "books": [
+        {
+          "id": "mgmt-001",
+          "title": "High Output Management",
+          "title_zh": "格鲁夫给经理人的第一课",
+          "author": "Andrew Grove",
+          "year": 1983,
+          "core_framework": "管理杠杆率 + 生产原则应用于管理",
+          "framework_tags": ["管理杠杆", "流程思维", "绩效管理"],
+          "best_for": ["中层管理", "团队效率", "绩效评估"]
+        },
+        {
+          "id": "mgmt-002",
+          "title": "Measure What Matters",
+          "title_zh": "这就是OKR",
+          "author": "John Doerr",
+          "year": 2018,
+          "core_framework": "OKR（目标与关键结果）",
+          "framework_tags": ["OKR", "目标管理", "透明对齐"],
+          "best_for": ["目标设定", "团队对齐", "绩效管理"]
+        },
+        {
+          "id": "mgmt-003",
+          "title": "The Five Dysfunctions of a Team",
+          "title_zh": "团队协作的五大障碍",
+          "author": "Patrick Lencioni",
+          "year": 2002,
+          "core_framework": "团队五层障碍金字塔",
+          "framework_tags": ["信任缺失", "惧怕冲突", "欠缺投入", "逃避责任", "无视结果"],
+          "best_for": ["团队诊断", "团队建设", "协作改善"]
+        },
+        {
+          "id": "mgmt-004",
+          "title": "Radical Candor",
+          "title_zh": "绝对坦率",
+          "author": "Kim Scott",
+          "year": 2017,
+          "core_framework": "Radical Candor 2x2 矩阵（关心+直接）",
+          "framework_tags": ["直接反馈", "关怀个人", "挑战直接"],
+          "best_for": ["反馈技巧", "管理沟通", "一对一谈话"]
+        },
+        {
+          "id": "mgmt-005",
+          "title": "The Fifth Discipline",
+          "title_zh": "第五项修炼",
+          "author": "Peter Senge",
+          "year": 1990,
+          "core_framework": "五项修炼（系统思考为核心）",
+          "framework_tags": ["系统思考", "心智模式", "共同愿景", "团队学习", "自我超越"],
+          "best_for": ["学习型组织", "系统性思维", "组织变革"]
+        },
+        {
+          "id": "mgmt-006",
+          "title": "No Rules Rules: Netflix and the Culture of Reinvention",
+          "title_zh": "不拘一格：网飞的自由与责任工作法",
+          "author": "Reed Hastings & Erin Meyer",
+          "year": 2020,
+          "core_framework": "自由与责任文化模型",
+          "framework_tags": ["人才密度", "坦诚文化", "减少管控"],
+          "best_for": ["组织文化", "人才策略", "创新型管理"]
+        }
+      ]
+    },
+    {
+      "domain_id": "sales",
+      "domain_name": "销售与谈判",
+      "domain_name_en": "Sales & Negotiation",
+      "description": "销售方法论、谈判技巧、客户关系、成交策略",
+      "books": [
+        {
+          "id": "sal-001",
+          "title": "SPIN Selling",
+          "title_zh": "销售巨人",
+          "author": "Neil Rackham",
+          "year": 1988,
+          "core_framework": "SPIN 提问法（情境-问题-暗示-需求）",
+          "framework_tags": ["SPIN", "顾问式销售", "大客户销售"],
+          "best_for": ["B2B销售", "大客户开发", "顾问式销售"]
+        },
+        {
+          "id": "sal-002",
+          "title": "The Challenger Sale",
+          "title_zh": "挑战者销售",
+          "author": "Matthew Dixon & Brent Adamson",
+          "year": 2011,
+          "core_framework": "挑战者模型（教学-定制-控制）",
+          "framework_tags": ["挑战者", "教学式销售", "洞察驱动"],
+          "best_for": ["复杂销售", "价值销售", "销售团队升级"]
+        },
+        {
+          "id": "sal-003",
+          "title": "Never Split the Difference",
+          "title_zh": "掰不弯的谈判",
+          "author": "Chris Voss",
+          "year": 2016,
+          "core_framework": "战术同理心 + 校准问题 + 标注情绪",
+          "framework_tags": ["战术同理心", "镜像", "标注", "校准问题"],
+          "best_for": ["谈判", "议价", "冲突解决", "商务沟通"]
+        },
+        {
+          "id": "sal-004",
+          "title": "Gap Selling",
+          "title_zh": "差距销售",
+          "author": "Keenan",
+          "year": 2019,
+          "core_framework": "现状→期望状态→差距→解决方案",
+          "framework_tags": ["差距", "问题导向", "变革驱动"],
+          "best_for": ["销售诊断", "需求挖掘", "价值呈现"]
+        },
+        {
+          "id": "sal-005",
+          "title": "Fanatical Prospecting",
+          "title_zh": "狂热开发",
+          "author": "Jeb Blount",
+          "year": 2015,
+          "core_framework": "多渠道开发 + 黄金时间法则 + 30天管道法则",
+          "framework_tags": ["客户开发", "管道管理", "拒绝管理"],
+          "best_for": ["客户开发", "销售管道", "销售纪律"]
+        },
+        {
+          "id": "sal-006",
+          "title": "To Sell Is Human",
+          "title_zh": "全新销售",
+          "author": "Daniel Pink",
+          "year": 2012,
+          "core_framework": "ABC 新框架（Attunement-Buoyancy-Clarity）",
+          "framework_tags": ["同频", "浮力", "清晰", "非销售式销售"],
+          "best_for": ["非传统销售", "影响力", "说服力"]
+        }
+      ]
+    },
+    {
+      "domain_id": "product",
+      "domain_name": "产品与创新",
+      "domain_name_en": "Product & Innovation",
+      "description": "产品开发、用户研究、精益方法、产品市场契合",
+      "books": [
+        {
+          "id": "prd-001",
+          "title": "The Lean Startup",
+          "title_zh": "精益创业",
+          "author": "Eric Ries",
+          "year": 2011,
+          "core_framework": "构建-测量-学习循环 + MVP",
+          "framework_tags": ["MVP", "验证学习", "快速迭代", "转型"],
+          "best_for": ["新产品验证", "创业方法", "快速试错"]
+        },
+        {
+          "id": "prd-002",
+          "title": "Inspired: How to Create Tech Products Customers Love",
+          "title_zh": "启示录",
+          "author": "Marty Cagan",
+          "year": 2008,
+          "core_framework": "产品发现 vs 产品交付 + 产品团队模型",
+          "framework_tags": ["产品发现", "产品经理", "跨职能团队"],
+          "best_for": ["产品管理", "产品团队", "产品发现"]
+        },
+        {
+          "id": "prd-003",
+          "title": "Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days",
+          "title_zh": "设计冲刺",
+          "author": "Jake Knapp",
+          "year": 2016,
+          "core_framework": "五天设计冲刺流程",
+          "framework_tags": ["设计冲刺", "快速原型", "用户测试"],
+          "best_for": ["快速验证", "产品决策", "团队协作"]
+        },
+        {
+          "id": "prd-004",
+          "title": "Competing Against Luck (Jobs to Be Done)",
+          "title_zh": "与运气竞争",
+          "author": "Clayton Christensen",
+          "year": 2016,
+          "core_framework": "Jobs to Be Done 框架",
+          "framework_tags": ["JTBD", "用户任务", "购买原因"],
+          "best_for": ["用户需求洞察", "产品定位", "创新方向"]
+        },
+        {
+          "id": "prd-005",
+          "title": "Crossing the Chasm",
+          "title_zh": "跨越鸿沟",
+          "author": "Geoffrey Moore",
+          "year": 1991,
+          "core_framework": "技术采用生命周期 + 鸿沟理论",
+          "framework_tags": ["鸿沟", "早期市场", "主流市场", "保龄球道策略"],
+          "best_for": ["产品推广策略", "市场进入", "增长阶段判断"]
+        },
+        {
+          "id": "prd-006",
+          "title": "The Mom Test",
+          "title_zh": "妈妈测试",
+          "author": "Rob Fitzpatrick",
+          "year": 2013,
+          "core_framework": "用户访谈三原则（不问观点、聚焦事实、追问承诺）",
+          "framework_tags": ["用户访谈", "需求验证", "避免假验证"],
+          "best_for": ["用户调研", "需求验证", "创业早期"]
+        }
+      ]
+    },
+    {
+      "domain_id": "leadership",
+      "domain_name": "领导力",
+      "domain_name_en": "Leadership",
+      "description": "领导风格、团队激励、组织变革、高管成长",
+      "books": [
+        {
+          "id": "ldr-001",
+          "title": "The 7 Habits of Highly Effective People",
+          "title_zh": "高效能人士的七个习惯",
+          "author": "Stephen Covey",
+          "year": 1989,
+          "core_framework": "七个习惯（从依赖到独立到互赖）",
+          "framework_tags": ["积极主动", "以终为始", "要事第一", "双赢思维", "知彼解己", "统合综效", "不断更新"],
+          "best_for": ["个人领导力", "效能提升", "人际关系"]
+        },
+        {
+          "id": "ldr-002",
+          "title": "Good to Great",
+          "title_zh": "从优秀到卓越",
+          "author": "Jim Collins",
+          "year": 2001,
+          "core_framework": "飞轮效应 + 第五级领导力 + 刺猬原则",
+          "framework_tags": ["飞轮", "第五级领导", "刺猬原则", "先人后事"],
+          "best_for": ["组织转型", "长期战略", "领导力发展"]
+        },
+        {
+          "id": "ldr-003",
+          "title": "Leaders Eat Last",
+          "title_zh": "团队领导最后吃饭",
+          "author": "Simon Sinek",
+          "year": 2014,
+          "core_framework": "安全圈理论 + 信任化学物质",
+          "framework_tags": ["安全圈", "信任", "服务型领导"],
+          "best_for": ["团队信任", "文化建设", "领导风格"]
+        },
+        {
+          "id": "ldr-004",
+          "title": "Extreme Ownership",
+          "title_zh": "极端所有权",
+          "author": "Jocko Willink & Leif Babin",
+          "year": 2015,
+          "core_framework": "极端所有权原则 + 任务式指挥",
+          "framework_tags": ["极端所有权", "没有糟糕的团队", "任务式指挥"],
+          "best_for": ["责任意识", "执行力", "危机管理"]
+        },
+        {
+          "id": "ldr-005",
+          "title": "The Leadership Pipeline",
+          "title_zh": "领导梯队",
+          "author": "Ram Charan, Stephen Drotter & James Noel",
+          "year": 2000,
+          "core_framework": "领导力六次转型",
+          "framework_tags": ["领导层级", "角色转换", "管理自我到管理他人"],
+          "best_for": ["领导力发展", "晋升转型", "人才梯队"]
+        },
+        {
+          "id": "ldr-006",
+          "title": "Start with Why",
+          "title_zh": "从为什么开始",
+          "author": "Simon Sinek",
+          "year": 2009,
+          "core_framework": "黄金圈法则（Why → How → What）",
+          "framework_tags": ["黄金圈", "使命驱动", "激励型领导"],
+          "best_for": ["使命愿景", "团队激励", "品牌叙事"]
+        }
+      ]
+    },
+    {
+      "domain_id": "growth",
+      "domain_name": "个人成长与效能",
+      "domain_name_en": "Personal Growth & Productivity",
+      "description": "习惯养成、时间管理、深度工作、思维模式",
+      "books": [
+        {
+          "id": "grw-001",
+          "title": "Atomic Habits",
+          "title_zh": "掌控习惯",
+          "author": "James Clear",
+          "year": 2018,
+          "core_framework": "习惯四步法（提示-渴求-反应-奖赏）+ 1%改善",
+          "framework_tags": ["习惯循环", "身份驱动", "环境设计", "习惯堆叠"],
+          "best_for": ["习惯养成", "行为改变", "持续改进"]
+        },
+        {
+          "id": "grw-002",
+          "title": "Deep Work",
+          "title_zh": "深度工作",
+          "author": "Cal Newport",
+          "year": 2016,
+          "core_framework": "深度工作假说 + 四种深度工作模式",
+          "framework_tags": ["深度工作", "浅工作", "注意力管理", "数字极简"],
+          "best_for": ["效率提升", "专注力", "知识工作者"]
+        },
+        {
+          "id": "grw-003",
+          "title": "Getting Things Done",
+          "title_zh": "搞定",
+          "author": "David Allen",
+          "year": 2001,
+          "core_framework": "GTD 五步工作流（收集-处理-组织-回顾-执行）",
+          "framework_tags": ["GTD", "收件箱清零", "下一步行动", "情境清单"],
+          "best_for": ["任务管理", "减轻焦虑", "项目组织"]
+        },
+        {
+          "id": "grw-004",
+          "title": "Mindset: The New Psychology of Success",
+          "title_zh": "终身成长",
+          "author": "Carol Dweck",
+          "year": 2006,
+          "core_framework": "固定思维 vs 成长思维",
+          "framework_tags": ["成长思维", "固定思维", "面对失败", "学习取向"],
+          "best_for": ["心态建设", "学习能力", "团队文化"]
+        },
+        {
+          "id": "grw-005",
+          "title": "Essentialism: The Disciplined Pursuit of Less",
+          "title_zh": "精要主义",
+          "author": "Greg McKeown",
+          "year": 2014,
+          "core_framework": "精要主义思维（少但更好）",
+          "framework_tags": ["精要", "取舍", "最高贡献点", "优雅拒绝"],
+          "best_for": ["优先级管理", "减法思维", "精力管理"]
+        },
+        {
+          "id": "grw-006",
+          "title": "The 4-Hour Workweek",
+          "title_zh": "每周工作4小时",
+          "author": "Tim Ferriss",
+          "year": 2007,
+          "core_framework": "DEAL 框架（定义-消除-自动化-解放）",
+          "framework_tags": ["DEAL", "80/20", "外包", "远程工作"],
+          "best_for": ["生活方式设计", "效率极致化", "自由职业"]
+        }
+      ]
+    },
+    {
+      "domain_id": "communication",
+      "domain_name": "沟通与表达",
+      "domain_name_en": "Communication & Persuasion",
+      "description": "演讲、写作、说服、冲突管理、跨文化沟通",
+      "books": [
+        {
+          "id": "com-001",
+          "title": "Crucial Conversations",
+          "title_zh": "关键对话",
+          "author": "Kerry Patterson et al.",
+          "year": 2002,
+          "core_framework": "关键对话七步法",
+          "framework_tags": ["安全氛围", "共享观点库", "STATE技巧"],
+          "best_for": ["高风险对话", "冲突解决", "团队沟通"]
+        },
+        {
+          "id": "com-002",
+          "title": "Nonviolent Communication",
+          "title_zh": "非暴力沟通",
+          "author": "Marshall Rosenberg",
+          "year": 1999,
+          "core_framework": "四步沟通法（观察-感受-需要-请求）",
+          "framework_tags": ["观察不评判", "表达感受", "说出需要", "提出请求"],
+          "best_for": ["冲突调解", "亲密关系", "同理心沟通"]
+        },
+        {
+          "id": "com-003",
+          "title": "The Pyramid Principle",
+          "title_zh": "金字塔原理",
+          "author": "Barbara Minto",
+          "year": 1987,
+          "core_framework": "金字塔结构（结论先行 + MECE）",
+          "framework_tags": ["结论先行", "MECE", "归纳演绎", "SCR"],
+          "best_for": ["商务写作", "汇报表达", "PPT逻辑"]
+        },
+        {
+          "id": "com-004",
+          "title": "Talk Like TED",
+          "title_zh": "像TED一样演讲",
+          "author": "Carmine Gallo",
+          "year": 2014,
+          "core_framework": "TED演讲九大秘诀",
+          "framework_tags": ["情感", "新颖", "难忘", "18分钟法则"],
+          "best_for": ["演讲", "公开表达", "路演"]
+        },
+        {
+          "id": "com-005",
+          "title": "Thanks for the Feedback",
+          "title_zh": "反馈的力量",
+          "author": "Douglas Stone & Sheila Heen",
+          "year": 2014,
+          "core_framework": "三种反馈触发器（真相-关系-身份）",
+          "framework_tags": ["接收反馈", "反馈类型", "触发器管理"],
+          "best_for": ["接受反馈", "给予反馈", "职业发展"]
+        }
+      ]
+    },
+    {
+      "domain_id": "thinking",
+      "domain_name": "思维与决策",
+      "domain_name_en": "Thinking & Decision Making",
+      "description": "心智模型、认知偏差、决策框架、批判性思维",
+      "books": [
+        {
+          "id": "thk-001",
+          "title": "Thinking, Fast and Slow",
+          "title_zh": "思考，快与慢",
+          "author": "Daniel Kahneman",
+          "year": 2011,
+          "core_framework": "系统1（快思考）vs 系统2（慢思考）",
+          "framework_tags": ["系统1", "系统2", "认知偏差", "前景理论"],
+          "best_for": ["决策质量", "认知偏差识别", "理性思维"]
+        },
+        {
+          "id": "thk-002",
+          "title": "Poor Charlie's Almanack",
+          "title_zh": "穷查理宝典",
+          "author": "Charles Munger (edited by Peter Kaufman)",
+          "year": 2005,
+          "core_framework": "多元思维模型 + 检查清单",
+          "framework_tags": ["多元思维模型", "逆向思维", "心理误判"],
+          "best_for": ["跨学科思维", "投资决策", "避免愚蠢"]
+        },
+        {
+          "id": "thk-003",
+          "title": "Super Thinking: The Big Book of Mental Models",
+          "title_zh": "超级思维",
+          "author": "Gabriel Weinberg & Lauren McCann",
+          "year": 2019,
+          "core_framework": "300+ 心智模型索引",
+          "framework_tags": ["心智模型", "第一性原理", "奥卡姆剃刀", "二阶思维"],
+          "best_for": ["思维工具箱", "问题分析", "决策框架"]
+        },
+        {
+          "id": "thk-004",
+          "title": "The Art of Thinking Clearly",
+          "title_zh": "清醒思考的艺术",
+          "author": "Rolf Dobelli",
+          "year": 2013,
+          "core_framework": "52 种认知偏差图鉴",
+          "framework_tags": ["认知偏差", "幸存者偏差", "确认偏误", "沉没成本"],
+          "best_for": ["避免思维陷阱", "决策质量", "批判性思维"]
+        },
+        {
+          "id": "thk-005",
+          "title": "Decisive: How to Make Better Choices in Life and Work",
+          "title_zh": "决断力",
+          "author": "Chip Heath & Dan Heath",
+          "year": 2013,
+          "core_framework": "WRAP 决策流程",
+          "framework_tags": ["拓宽选项", "现实检验", "保持距离", "准备犯错"],
+          "best_for": ["重大决策", "避免决策陷阱", "团队决策"]
+        }
+      ]
+    },
+    {
+      "domain_id": "startup",
+      "domain_name": "创业",
+      "domain_name_en": "Entrepreneurship",
+      "description": "创业方法、融资、增长、商业模式验证",
+      "books": [
+        {
+          "id": "stp-001",
+          "title": "The Hard Thing About Hard Things",
+          "title_zh": "创业维艰",
+          "author": "Ben Horowitz",
+          "year": 2014,
+          "core_framework": "战时CEO vs 和平时期CEO + 实战原则",
+          "framework_tags": ["战时管理", "艰难决策", "CEO心态"],
+          "best_for": ["创业心态", "危机管理", "CEO成长"]
+        },
+        {
+          "id": "stp-002",
+          "title": "Rework",
+          "title_zh": "重来",
+          "author": "Jason Fried & David Heinemeier Hansson",
+          "year": 2010,
+          "core_framework": "小而美创业哲学",
+          "framework_tags": ["小团队", "盈利优先", "少即是多", "反融资"],
+          "best_for": ["小企业经营", "产品型创业", "自力更生"]
+        },
+        {
+          "id": "stp-003",
+          "title": "Business Model Generation",
+          "title_zh": "商业模式新生代",
+          "author": "Alexander Osterwalder & Yves Pigneur",
+          "year": 2010,
+          "core_framework": "商业模式画布（9格模型）",
+          "framework_tags": ["商业模式画布", "价值主张", "渠道", "收入流"],
+          "best_for": ["商业模式设计", "创业规划", "战略创新"]
+        },
+        {
+          "id": "stp-004",
+          "title": "Traction: How Any Startup Can Achieve Explosive Customer Growth",
+          "title_zh": "牵引力",
+          "author": "Gabriel Weinberg & Justin Mares",
+          "year": 2015,
+          "core_framework": "19 种获客渠道 + 靶心框架",
+          "framework_tags": ["获客渠道", "靶心框架", "50%法则"],
+          "best_for": ["获客策略", "增长渠道选择", "早期增长"]
+        },
+        {
+          "id": "stp-005",
+          "title": "$100M Leads",
+          "title_zh": "价值一亿的线索",
+          "author": "Alex Hormozi",
+          "year": 2023,
+          "core_framework": "四种获客方式（暖/冷 × 一对一/一对多）",
+          "framework_tags": ["获客矩阵", "内容获客", "冷启动", "付费广告"],
+          "best_for": ["获客体系", "线索生成", "流量策略"]
+        }
+      ]
+    },
+    {
+      "domain_id": "hr",
+      "domain_name": "人力资源与人才",
+      "domain_name_en": "HR & Talent",
+      "description": "招聘、人才评估、绩效管理、组织设计",
+      "books": [
+        {
+          "id": "hr-001",
+          "title": "Who: The A Method for Hiring",
+          "title_zh": "聘谁",
+          "author": "Geoff Smart & Randy Street",
+          "year": 2008,
+          "core_framework": "A Method 四步招聘法",
+          "framework_tags": ["记分卡", "漏斗筛选", "结构化面试", "背景调查"],
+          "best_for": ["招聘流程", "人才筛选", "避免招错人"]
+        },
+        {
+          "id": "hr-002",
+          "title": "Work Rules!",
+          "title_zh": "重新定义团队",
+          "author": "Laszlo Bock",
+          "year": 2015,
+          "core_framework": "Google人才管理原则",
+          "framework_tags": ["数据驱动HR", "使命感", "透明", "自由度"],
+          "best_for": ["人才管理", "文化建设", "绩效制度"]
+        },
+        {
+          "id": "hr-003",
+          "title": "First, Break All the Rules",
+          "title_zh": "首先，打破一切常规",
+          "author": "Marcus Buckingham & Curt Coffman",
+          "year": 1999,
+          "core_framework": "Q12 员工敬业度模型 + 优势管理",
+          "framework_tags": ["Q12", "优势管理", "个性化管理"],
+          "best_for": ["员工敬业度", "经理人培训", "优势发挥"]
+        },
+        {
+          "id": "hr-004",
+          "title": "Topgrading",
+          "title_zh": "顶级评级",
+          "author": "Bradford Smart",
+          "year": 2005,
+          "core_framework": "A/B/C 球员评估法 + 深度面试法",
+          "framework_tags": ["A级人才", "深度面试", "人才密度"],
+          "best_for": ["高管招聘", "人才评估", "团队升级"]
+        },
+        {
+          "id": "hr-005",
+          "title": "Drive: The Surprising Truth About What Motivates Us",
+          "title_zh": "驱动力",
+          "author": "Daniel Pink",
+          "year": 2009,
+          "core_framework": "内在动力三要素（自主-精通-目的）",
+          "framework_tags": ["自主", "精通", "目的", "内在动机"],
+          "best_for": ["员工激励", "薪酬设计", "绩效管理"]
+        }
+      ]
+    },
+    {
+      "domain_id": "operations",
+      "domain_name": "运营与供应链",
+      "domain_name_en": "Operations & Supply Chain",
+      "description": "流程优化、精益管理、供应链管理、运营效率",
+      "books": [
+        {
+          "id": "ops-001",
+          "title": "The Goal",
+          "title_zh": "目标",
+          "author": "Eliyahu Goldratt",
+          "year": 1984,
+          "core_framework": "约束理论（TOC）+ 五步聚焦法",
+          "framework_tags": ["约束理论", "瓶颈", "有效产出", "五步聚焦"],
+          "best_for": ["流程优化", "瓶颈识别", "产能提升"]
+        },
+        {
+          "id": "ops-002",
+          "title": "The Toyota Way",
+          "title_zh": "丰田模式",
+          "author": "Jeffrey Liker",
+          "year": 2004,
+          "core_framework": "14 项管理原则 + 精益生产",
+          "framework_tags": ["精益", "持续改善", "消除浪费", "准时生产"],
+          "best_for": ["精益管理", "制造业", "质量改善"]
+        },
+        {
+          "id": "ops-003",
+          "title": "The Checklist Manifesto",
+          "title_zh": "清单革命",
+          "author": "Atul Gawande",
+          "year": 2009,
+          "core_framework": "检查清单方法论（执行清单 vs 沟通清单）",
+          "framework_tags": ["清单", "防错", "复杂性管理"],
+          "best_for": ["流程标准化", "质量控制", "复杂任务管理"]
+        },
+        {
+          "id": "ops-004",
+          "title": "Lean Six Sigma",
+          "title_zh": "精益六西格玛",
+          "author": "Michael George",
+          "year": 2002,
+          "core_framework": "DMAIC 五步法 + 价值流分析",
+          "framework_tags": ["DMAIC", "六西格玛", "价值流", "减少变异"],
+          "best_for": ["质量管理", "流程改善", "数据驱动优化"]
+        },
+        {
+          "id": "ops-005",
+          "title": "Scrum: The Art of Doing Twice the Work in Half the Time",
+          "title_zh": "Scrum敏捷项目管理",
+          "author": "Jeff Sutherland",
+          "year": 2014,
+          "core_framework": "Scrum 框架（冲刺-站会-回顾-看板）",
+          "framework_tags": ["Scrum", "冲刺", "敏捷", "迭代"],
+          "best_for": ["项目管理", "团队协作", "敏捷实践"]
+        }
+      ]
+    },
+    {
+      "domain_id": "design_ux",
+      "domain_name": "设计与用户体验",
+      "domain_name_en": "Design & UX",
+      "description": "用户体验设计、设计思维、界面设计、服务设计",
+      "books": [
+        {
+          "id": "dux-001",
+          "title": "The Design of Everyday Things",
+          "title_zh": "设计心理学",
+          "author": "Don Norman",
+          "year": 1988,
+          "core_framework": "可用性原则（功能可见性-反馈-映射-约束）",
+          "framework_tags": ["功能可见性", "心智模型", "反馈", "容错"],
+          "best_for": ["产品设计", "用户体验", "可用性评估"]
+        },
+        {
+          "id": "dux-002",
+          "title": "Don't Make Me Think",
+          "title_zh": "点石成金",
+          "author": "Steve Krug",
+          "year": 2000,
+          "core_framework": "Web可用性第一定律 + 可用性测试简化法",
+          "framework_tags": ["别让我想", "自明性", "可用性测试"],
+          "best_for": ["网页设计", "界面优化", "快速可用性测试"]
+        },
+        {
+          "id": "dux-003",
+          "title": "Change by Design",
+          "title_zh": "设计改变一切",
+          "author": "Tim Brown",
+          "year": 2009,
+          "core_framework": "设计思维（共情-定义-构思-原型-测试）",
+          "framework_tags": ["设计思维", "共情", "原型", "迭代"],
+          "best_for": ["创新方法", "用户洞察", "服务设计"]
+        },
+        {
+          "id": "dux-004",
+          "title": "100 Things Every Designer Needs to Know About People",
+          "title_zh": "设计师要懂心理学",
+          "author": "Susan Weinschenk",
+          "year": 2011,
+          "core_framework": "100 条设计心理学原则",
+          "framework_tags": ["认知心理", "视觉设计", "行为设计"],
+          "best_for": ["界面设计", "用户心理", "交互设计"]
+        },
+        {
+          "id": "dux-005",
+          "title": "Lean UX",
+          "title_zh": "精益UX",
+          "author": "Jeff Gothelf & Josh Seiden",
+          "year": 2013,
+          "core_framework": "假设-实验-学习循环",
+          "framework_tags": ["精益UX", "假设驱动", "MVP设计", "跨职能"],
+          "best_for": ["UX流程", "敏捷设计", "产品团队协作"]
+        }
+      ]
+    },
+    {
+      "domain_id": "data_growth",
+      "domain_name": "数据与增长",
+      "domain_name_en": "Data & Growth",
+      "description": "数据驱动决策、增长黑客、指标体系、实验文化",
+      "books": [
+        {
+          "id": "dat-001",
+          "title": "Hacking Growth",
+          "title_zh": "增长黑客",
+          "author": "Sean Ellis & Morgan Brown",
+          "year": 2017,
+          "core_framework": "增长团队 + 高速实验循环",
+          "framework_tags": ["增长团队", "北极星指标", "AARRR", "高速实验"],
+          "best_for": ["增长策略", "实验驱动", "产品增长"]
+        },
+        {
+          "id": "dat-002",
+          "title": "Lean Analytics",
+          "title_zh": "精益数据分析",
+          "author": "Alistair Croll & Benjamin Yoskovitz",
+          "year": 2013,
+          "core_framework": "一个关键指标（OMTM）+ 精益分析阶段",
+          "framework_tags": ["OMTM", "虚荣指标", "可行动指标", "阶段匹配"],
+          "best_for": ["创业数据", "指标体系", "数据驱动"]
+        },
+        {
+          "id": "dat-003",
+          "title": "Trustworthy Online Controlled Experiments (A/B Testing)",
+          "title_zh": "值得信赖的在线对照实验",
+          "author": "Ron Kohavi, Diane Tang & Ya Xu",
+          "year": 2020,
+          "core_framework": "A/B 测试方法论",
+          "framework_tags": ["A/B测试", "实验设计", "统计显著性", "OEC"],
+          "best_for": ["实验设计", "数据决策", "产品优化"]
+        },
+        {
+          "id": "dat-004",
+          "title": "Storytelling with Data",
+          "title_zh": "用数据讲故事",
+          "author": "Cole Nussbaumer Knaflic",
+          "year": 2015,
+          "core_framework": "数据可视化六步法",
+          "framework_tags": ["数据可视化", "图表选择", "去除杂乱", "聚焦注意力"],
+          "best_for": ["数据汇报", "可视化设计", "商业演示"]
+        },
+        {
+          "id": "dat-005",
+          "title": "Product-Led Growth",
+          "title_zh": "产品驱动增长",
+          "author": "Wes Bush",
+          "year": 2019,
+          "core_framework": "PLG 模型（产品即获客渠道）",
+          "framework_tags": ["PLG", "自助服务", "产品驱动", "免费增值"],
+          "best_for": ["SaaS增长", "产品驱动获客", "自助模式设计"]
+        }
+      ]
+    },
+    {
+      "domain_id": "psychology",
+      "domain_name": "应用心理学",
+      "domain_name_en": "Applied Psychology",
+      "description": "行为科学、认知心理、情商、动机理论",
+      "books": [
+        {
+          "id": "psy-001",
+          "title": "Predictably Irrational",
+          "title_zh": "怪诞行为学",
+          "author": "Dan Ariely",
+          "year": 2008,
+          "core_framework": "行为经济学核心实验与原则",
+          "framework_tags": ["锚定效应", "免费的力量", "预期影响", "社会规范"],
+          "best_for": ["定价策略", "用户行为", "营销心理"]
+        },
+        {
+          "id": "psy-002",
+          "title": "Nudge",
+          "title_zh": "助推",
+          "author": "Richard Thaler & Cass Sunstein",
+          "year": 2008,
+          "core_framework": "选择架构 + 自由主义的温和专制主义",
+          "framework_tags": ["助推", "选择架构", "默认选项", "框架效应"],
+          "best_for": ["行为设计", "政策设计", "用户引导"]
+        },
+        {
+          "id": "psy-003",
+          "title": "Emotional Intelligence",
+          "title_zh": "情商",
+          "author": "Daniel Goleman",
+          "year": 1995,
+          "core_framework": "情商五维度（自我意识-自我管理-动机-同理心-社交技巧）",
+          "framework_tags": ["情商", "自我意识", "同理心", "社交技巧"],
+          "best_for": ["领导力", "人际关系", "团队管理"]
+        },
+        {
+          "id": "psy-004",
+          "title": "Flow: The Psychology of Optimal Experience",
+          "title_zh": "心流",
+          "author": "Mihaly Csikszentmihalyi",
+          "year": 1990,
+          "core_framework": "心流状态模型（挑战 vs 技能）",
+          "framework_tags": ["心流", "最优体验", "挑战-技能平衡"],
+          "best_for": ["工作效率", "产品体验设计", "个人成长"]
+        },
+        {
+          "id": "psy-005",
+          "title": "Thinking in Bets",
+          "title_zh": "对赌思维",
+          "author": "Annie Duke",
+          "year": 2018,
+          "core_framework": "概率思维 + 结果≠决策质量",
+          "framework_tags": ["概率思维", "结果偏差", "决策日志", "思维群体"],
+          "best_for": ["决策质量", "不确定性管理", "复盘方法"]
+        }
+      ]
+    },
+    {
+      "domain_id": "finance",
+      "domain_name": "财务与投资",
+      "domain_name_en": "Finance & Investment",
+      "description": "投资哲学、财务思维、估值方法、财富管理",
+      "books": [
+        {
+          "id": "fin-001",
+          "title": "The Intelligent Investor",
+          "title_zh": "聪明的投资者",
+          "author": "Benjamin Graham",
+          "year": 1949,
+          "core_framework": "价值投资 + 安全边际 + Mr. Market",
+          "framework_tags": ["价值投资", "安全边际", "市场先生"],
+          "best_for": ["投资哲学", "股票投资", "风险管理"]
+        },
+        {
+          "id": "fin-002",
+          "title": "The Psychology of Money",
+          "title_zh": "金钱心理学",
+          "author": "Morgan Housel",
+          "year": 2020,
+          "core_framework": "财富行为学（20条永恒原则）",
+          "framework_tags": ["复利", "长期主义", "合理>理性", "尾部事件"],
+          "best_for": ["财富心态", "投资行为", "长期规划"]
+        },
+        {
+          "id": "fin-003",
+          "title": "Rich Dad Poor Dad",
+          "title_zh": "富爸爸穷爸爸",
+          "author": "Robert Kiyosaki",
+          "year": 1997,
+          "core_framework": "资产 vs 负债 + 现金流象限",
+          "framework_tags": ["资产", "负债", "现金流", "财务自由"],
+          "best_for": ["财商启蒙", "被动收入", "财务思维"]
+        },
+        {
+          "id": "fin-004",
+          "title": "Principles",
+          "title_zh": "原则",
+          "author": "Ray Dalio",
+          "year": 2017,
+          "core_framework": "极度透明 + 极度真实 + 系统化决策",
+          "framework_tags": ["原则驱动", "极度透明", "可信度加权", "机器化思维"],
+          "best_for": ["决策系统", "组织管理", "投资思维"]
+        },
+        {
+          "id": "fin-005",
+          "title": "The Most Important Thing",
+          "title_zh": "投资最重要的事",
+          "author": "Howard Marks",
+          "year": 2011,
+          "core_framework": "第二层思维 + 周期思维 + 风险管理",
+          "framework_tags": ["第二层思维", "周期", "风险", "逆向思维"],
+          "best_for": ["投资哲学", "风险思维", "市场判断"]
+        }
+      ]
+    }
+  ]
+}
