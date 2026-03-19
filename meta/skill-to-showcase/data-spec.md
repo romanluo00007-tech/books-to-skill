@@ -23,14 +23,14 @@
   "sceneCount": 19,
   "quizCount": 9,
   "personas": [
-    { "icon": "🚀", "title": "营销人冷启动龙虾", "desc": "一键安装，龙虾秒懂营销", "color": "#e74c3c" },
-    { "icon": "📋", "title": "营销人日常使用", "desc": "定位、文案、转化、留存…随时调取方法论", "color": "#3498db" },
-    { "icon": "📚", "title": "想学习营销经典理论", "desc": "通过实战 prompt 掌握 9 本经典", "color": "#1abc9c" }
+    { "title": "营销人冷启动龙虾", "desc": "一键安装，龙虾秒懂营销", "color": "#e74c3c" },
+    { "title": "营销人日常使用", "desc": "定位、文案、转化、留存…随时调取方法论", "color": "#3498db" },
+    { "title": "想学习营销经典理论", "desc": "通过实战 prompt 掌握 9 本经典", "color": "#1abc9c" }
   ],
   "usageSteps": [
-    { "icon": "📖", "title": "让 Agent 学习", "examples": ["你去学一下营销方法论"], "result": "升级龙虾大脑", "color": "#f0c040" },
-    { "icon": "💬", "title": "在相关任务中自动调用", "examples": ["帮我分析这条内容为什么火", "帮我写卖点"], "result": "Agent 自动匹配框架", "color": "#e67e22" },
-    { "icon": "🎯", "title": "指定具体框架进行分析", "examples": ["用 STEPPS 帮我分析"], "result": "精确调用某一框架", "color": "#e74c3c" }
+    { "step": 1, "title": "让 Agent 学习", "examples": ["你去学一下营销方法论"], "result": "升级龙虾大脑", "color": "#f0c040" },
+    { "step": 2, "title": "在相关任务中自动调用", "examples": ["帮我分析这条内容为什么火", "帮我写卖点"], "result": "Agent 自动匹配框架", "color": "#e67e22" },
+    { "step": 3, "title": "指定具体框架进行分析", "examples": ["用 STEPPS 帮我分析"], "result": "精确调用某一框架", "color": "#e74c3c" }
   ]
 }
 ```
@@ -39,8 +39,8 @@
 - `skillName`：skill 的安装 ID
 - `title`/`subtitle`/`slogan`：首页大标题、标签、一句话卖点
 - `accentColor`：主色调，贯穿全站。不同领域建议用不同色调区分
-- `personas`：3 个使用场景卡片，描述谁会用、怎么用
-- `usageSteps`：3 步使用方法，从"学习"到"自动调用"到"指定框架"，结构通用但 examples 要换成该领域的典型 prompt
+- `personas`：3 个使用场景卡片，每项需 `title`、`desc`、`color`。视觉上用彩色圆点+左侧色条，无需 icon/emoji
+- `usageSteps`：3 步使用方法，每项需 `step`(1-3)、`title`、`examples`(数组)、`result`、`color`。从"学习"→"自动调用"→"指定框架"，examples 要换成该领域的典型 prompt
 
 ---
 
@@ -54,7 +54,6 @@
     "pillar": "定战略",
     "desc": "我是谁？占什么位置？讲什么故事？",
     "color": "#e74c3c",
-    "emoji": "🎯",
     "ids": [0, 5, 3]
   }
 ]
@@ -64,7 +63,7 @@
 - 支柱数量 2-4 个，太多会碎，太少没结构
 - 支柱之间要有逻辑递进关系（先做什么→再做什么→然后什么→最后什么）
 - `ids` 数组引用 FW 中的方法论 id
-- 每个支柱一个主色调，颜色之间要有区分度
+- 每个支柱一个主色调（`color`），颜色之间要有区分度。视觉上用数字+左侧色条，无需 emoji
 - `desc` 用一句提问式的话，不超过 20 字
 
 **各领域参考结构：**
@@ -121,7 +120,7 @@
 | id | ✅ | 从 0 开始的整数，被 PYRAMID.ids 和 SCENES.p/s 引用 |
 | name | ✅ | 中文名，3-8 字 |
 | en | ✅ | 英文名，用于搜索和显示 |
-| emoji | ✅ | 1 个 emoji，代表这个方法论的视觉符号 |
+| emoji | 可选 | 1 个 emoji，无 coverId 时作为书封占位显示。有 coverId 可不填 |
 | book | ✅ | 来源书名（简写即可） |
 | author | ✅ | 作者名 |
 | year | ✅ | 出版年份 |

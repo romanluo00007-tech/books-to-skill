@@ -1,0 +1,13 @@
+{
+  "name": "books-to-skill",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev:portal": "cd portal && npm run dev",
+    "dev:marketing": "cd showcases/marketing && npm run dev",
+    "dev:strategy": "cd showcases/strategy && npm run dev",
+    "dev:sales": "cd showcases/sales && npm run dev",
+    "dev:product": "cd showcases/product && npm run dev",
+    "preview": "npm run build && npx serve dist -p 3000"
+  }
+}

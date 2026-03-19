@@ -118,10 +118,13 @@ templates/app-template.jsx
 - `prompts`：用户可以直接复制给 agent 的完整 prompt，不是半句话
 - 每个支柱下的场景要覆盖该阶段的常见需求，不重复
 
-### 视觉统一
-- `accentColor` 不要和营销版重复（营销是金色 #f0c040）
-- 建议各领域色调：
-  - 战略：#6366f1（靛蓝）
+### 视觉统一（浅色主题）
+- 全站统一浅色主题：背景 `#faf8f5`，卡片 `#fff`，边框 `#e7e5e4`，字体 DM Serif Display + DM Sans
+- 品牌统一为 "Books to Skill"，含返回门户链接
+- 用彩色圆点、左侧色条、数字序号做视觉标识，**不用 emoji**（personas、usageSteps、PYRAMID 均无需 icon/emoji）
+- `accentColor` 不同领域用不同色调区分。建议：
+  - 营销：#f0c040（金色）
+  - 战略：#4a90d9 或 #6366f1（蓝/靛）
   - 销售：#22c55e（绿色）
   - 管理：#f97316（橙色）
   - 产品：#06b6d4（青色）
