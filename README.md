@@ -1,6 +1,6 @@
 # Books to Skill
 
-将书籍转化为可复用的 AI 技能。
+将书籍转化为可复用的 AI 技能。可 Fork 为模板，或直接使用。
 
 ---
 
@@ -23,6 +23,37 @@ books-to-skill/
 │   └── product/
 └── portal/                    # 门户网站（统一入口）
 ```
+
+---
+
+## 使用此模板（Fork 后的用户）
+
+1. **Fork** 本仓库到你的 GitHub 账号
+2. **配置 GitHub 链接**：在 `portal/` 下创建 `.env.local`（参考 `.env.example`）：
+   ```bash
+   cp portal/.env.example portal/.env.local
+   ```
+   编辑 `.env.local`，将 `YOUR_GITHUB_ORG` 改为你的 GitHub 用户名或组织名
+3. **构建与预览**：
+   ```bash
+   npm run build
+   npm run preview
+   ```
+4. **部署**：将你的 Fork 推送至 GitHub，按 [DEPLOY.md](./DEPLOY.md) 部署到 Vercel
+
+---
+
+## 个人配置（仅本地，不上传）
+
+以下文件/目录包含你的个人配置，已加入 `.gitignore`，**不会随 git push 上传**：
+
+| 文件 | 用途 | 说明 |
+|------|------|------|
+| `portal/.env.local` | 你的 GitHub 账号/组织 | 复制 `.env.example` 为 `.env.local`，填入 `VITE_GITHUB_ORG=你的用户名` |
+| `dist/` | 构建产物 | 每次 `npm run build` 生成，无需提交 |
+| `node_modules/` | 依赖 | 由 `npm install` 安装 |
+
+**.gitignore 的作用**：被列在其中的文件，`git add` 时会自动忽略，因此不会进入提交、也不会被 push 到远程。你可以放心在 `.env.local` 里写自己的配置。
 
 ---
 
@@ -49,8 +80,8 @@ npm run dev:marketing   # 营销展示站
 
 ## 部署
 
-- **GitHub**：代码已推送至 [romanluo00007-tech/books-to-skill](https://github.com/romanluo00007-tech/books-to-skill)
-- **Vercel**：导入该仓库即可自动构建部署，详见 [DEPLOY.md](./DEPLOY.md)
+- **GitHub**：Fork 后推送到你自己的仓库
+- **Vercel**：导入你的 Fork 仓库即可自动构建部署，详见 [DEPLOY.md](./DEPLOY.md)
 
 ---
 

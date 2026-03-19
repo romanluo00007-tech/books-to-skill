@@ -3,12 +3,12 @@
 ## 一、发布到 GitHub
 
 ```bash
-cd "/Users/manluo/Documents/Ouraca/Ouraca Project/books-to-skill"
+cd /path/to/books-to-skill
 
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/romanluo00007-tech/books-to-skill.git
+git remote add origin https://github.com/YOUR_USERNAME/books-to-skill.git
 git branch -M main
 git push -u origin main
 ```

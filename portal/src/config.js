@@ -1,3 +1,7 @@
+// GitHub 仓库：从 .env.local 读取，未配置时显示占位符
+const GITHUB_ORG = import.meta.env.VITE_GITHUB_ORG || "YOUR_GITHUB_ORG";
+const REPO_BASE = `https://github.com/${GITHUB_ORG}/books-to-skill`;
+
 // 知识 Skill 列表
 export const KNOWLEDGE_SKILLS = [
   {
@@ -56,7 +60,7 @@ export const META_SKILLS = [
     input: "书籍/领域",
     output: "SKILL.md + references",
     pagePath: "/meta/books-to-skill",
-    link: "https://github.com/romanluo00007-tech/books-to-skill/tree/main/meta/books-to-skill",
+    link: `${REPO_BASE}/tree/main/meta/books-to-skill`,
     desc: "将经典书籍中的方法论提炼为 agent 可用的结构化 skill。从核心书库选领域、为每本书提炼 reference、生成 SKILL.md 索引。是「造武器的武器」。",
   },
   {
@@ -67,7 +71,7 @@ export const META_SKILLS = [
     input: "skill 数据",
     output: "React 展示站",
     pagePath: "/meta/skill-to-showcase",
-    link: "https://github.com/romanluo00007-tech/books-to-skill/tree/main/meta/skill-to-showcase",
+    link: `${REPO_BASE}/tree/main/meta/skill-to-showcase`,
     desc: "为任何领域的方法论 skill 自动生成交互式展示网页。输入 skill 数据，输出可部署的 React 单页应用，含首页、知识库、场景匹配、知识测试。",
   },
 ];
@@ -115,4 +119,4 @@ export const PROJECT_STRUCTURE = `books-to-skill/
 │   └── product/            # 产品展示站
 └── portal/                 # 门户网站`;
 
-export const GITHUB_URL = "https://github.com/romanluo00007-tech/books-to-skill";
+export const GITHUB_URL = REPO_BASE;
