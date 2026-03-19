@@ -1,30 +1,67 @@
 # Books to Skill
 
-将书籍知识转化为可复用技能的系列工具与展示项目。
+将书籍转化为可复用的 AI 技能。
+
+---
 
 ## 项目结构
 
 ```
 books-to-skill/
-├── skills/marketing/          # 营销领域知识技能（来自 marketing-knowledge-skill）
-├── meta/books-to-skill/      # 书籍转技能的元工具与流程（来自 consultant-knowledge-creator）
-├── meta/skill-to-showcase/   # 技能转展示的元工具与模板（来自 skill-to-showcase）
-├── showcases/marketing/      # 营销知识展示网站（迭代中的展示站）
-└── portal/                   # 门户网站（预留，后续使用）
+├── skills/                    # 各领域知识 Skill
+│   ├── marketing/             # 营销方法论 (9 frameworks)
+│   ├── strategy/              # 战略方法论 (6 frameworks)
+│   ├── sales/                 # 销售方法论 (6 frameworks)
+│   └── product/               # 产品方法论 (6 frameworks)
+├── meta/                      # 元工具 Meta Skill
+│   ├── books-to-skill/        # 书籍 → Skill
+│   └── skill-to-showcase/     # Skill → 展示网页
+├── showcases/                 # 各领域展示站
+│   ├── marketing/
+│   ├── strategy/
+│   ├── sales/
+│   └── product/
+└── portal/                    # 门户网站（统一入口）
 ```
 
-### 目录说明
+---
 
-| 目录 | 说明 |
+## 快速开始
+
+### 本地预览
+
+```bash
+npm run build
+npm run preview
+```
+
+在浏览器打开 `http://localhost:3000`。
+
+### 开发模式
+
+```bash
+npm run dev:portal      # 门户
+npm run dev:marketing   # 营销展示站
+# 其他 showcase 同理
+```
+
+---
+
+## 部署
+
+- **GitHub**：代码已推送至 [romanluo00007-tech/books-to-skill](https://github.com/romanluo00007-tech/books-to-skill)
+- **Vercel**：导入该仓库即可自动构建部署，详见 [DEPLOY.md](./DEPLOY.md)
+
+---
+
+## 页面说明
+
+| 路径 | 说明 |
 |------|------|
-| `skills/` | 各领域知识技能库，按领域分子目录 |
-| `meta/` | 元工具与工作流，用于知识生产的标准化流程 |
-| `showcases/` | 各技能对应的展示网站，按领域分子目录 |
-| `portal/` | 统一门户入口（待开发） |
-
-## 使用说明
-
-- **skills/marketing/**：包含营销类书籍提炼的知识点与技能文档
-- **meta/books-to-skill/**：提供从书籍到技能的转化方法、参考与工具
-- **meta/skill-to-showcase/**：提供从技能到展示网站的模板与数据规范
-- **showcases/marketing/**：基于营销技能构建的展示站点，可独立运行
+| `/` | 门户首页 |
+| `/meta/books-to-skill` | 书籍转 Skill 元工具说明 |
+| `/meta/skill-to-showcase` | Skill 转展示网页元工具说明 |
+| `/showcases/marketing/` | 营销方法论展示 |
+| `/showcases/strategy/` | 战略方法论展示 |
+| `/showcases/sales/` | 销售方法论展示 |
+| `/showcases/product/` | 产品方法论展示 |

@@ -3,20 +3,26 @@
 ## 一、发布到 GitHub
 
 ```bash
-# 1. 初始化 git（若尚未初始化）
+cd "/Users/manluo/Documents/Ouraca/Ouraca Project/books-to-skill"
+
 git init
-
-# 2. 添加远程仓库
-git remote add origin https://github.com/你的用户名/books-to-skill.git
-
-# 3. 提交并推送
 git add .
-git commit -m "feat: add deployment config for Vercel"
+git commit -m "Initial commit"
+git remote add origin https://github.com/romanluo00007-tech/books-to-skill.git
 git branch -M main
 git push -u origin main
 ```
 
-## 二、部署到 Vercel
+## 二、本地预览
+
+```bash
+npm run build
+npm run preview
+```
+
+访问 `http://localhost:3000`。Meta 页面（`/meta/books-to-skill` 等）和 Showcase 页面均可正常访问。
+
+## 三、部署到 Vercel
 
 ### 方式 A：Vercel 网页导入
 
@@ -36,14 +42,15 @@ vercel
 # 按提示登录并选择项目，首次会创建项目
 ```
 
-## 三、路由与跳转说明
+## 四、路由与跳转说明
 
 构建结果目录结构：
 
 ```
 dist/
-├── index.html          ← 门户首页 /
+├── index.html          ← 门户首页 /，也用于 /meta/* SPA 回退
 ├── assets/
+├── serve.json          ← 仅对 /meta/* 做 SPA fallback
 ├── showcases/
 │   ├── marketing/      ← /showcases/marketing/
 │   ├── strategy/       ← /showcases/strategy/
@@ -52,10 +59,11 @@ dist/
 ```
 
 - **门户首页**：`/` → Portal
-- **展示页**：`/showcases/marketing/`、`/showcases/strategy/` 等 → 对应方法论展示站
+- **Meta 页面**：`/meta/books-to-skill`、`/meta/skill-to-showcase` → Portal SPA 路由
+- **展示页**：`/showcases/*` → 各自独立展示站
 
-各 showcase 的 Vite 配置已设置 `base: '/showcases/xxx/'`，静态资源路径正确，页面跳转和资源加载无需额外配置。
+本地预览使用 `serve` + `serve.json`，仅对 `/meta/*` 做 SPA 回退，`/showcases/*` 正常返回静态文件。
 
-## 四、可选：绑定自定义域名
+## 五、可选：绑定自定义域名
 
 在 Vercel 项目 **Settings → Domains** 中添加你的域名，并按提示完成 DNS 配置。
