@@ -261,6 +261,7 @@ export default function App() {
               <code style={{ flex: 1, minWidth: 200, padding: "14px 18px", background: T.codeBg, borderRadius: 10, border: `1px solid ${T.border}`, fontSize: 14, fontFamily: "ui-monospace,monospace", color: ACCENT }}>{INSTALL_CMD}</code>
               <button onClick={() => copyPrompt(INSTALL_CMD)} style={{ padding: "12px 20px", background: copiedIdx === INSTALL_CMD ? "#22c55e" : ACCENT, color: "#000", borderRadius: 10, fontSize: 13, fontWeight: 700, border: "none", cursor: "pointer", flexShrink: 0 }}>{copiedIdx === INSTALL_CMD ? "已复制" : "复制"}</button>
             </div>
+            <div style={{ fontSize: 11, color: T.textMuted, marginTop: 10 }}>（还未发布仅供演示）</div>
           </div>
 
           <div style={{ fontSize: 14, fontWeight: 700, marginBottom: 12, color: T.text }}>本 Skill 包含</div>

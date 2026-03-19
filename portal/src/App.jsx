@@ -40,9 +40,8 @@ function HomeContent() {
         {/* Hero — 书本气质 */}
         <header style={{ textAlign: "center", marginBottom: 72 }}>
           <h1 style={{
-            fontFamily: "'DM Serif Display', Georgia, serif",
             fontSize: "clamp(2.75rem, 7vw, 3.75rem)",
-            fontWeight: 400,
+            fontWeight: 700,
             letterSpacing: "-0.02em",
             marginBottom: 14,
             background: "linear-gradient(135deg, #b45309 0%, #8b5cf6 100%)",
@@ -175,7 +174,7 @@ function HomeContent() {
         {/* 生产工具 — 移到领域方法论上面 */}
         <section style={{ marginBottom: 64 }}>
           <p style={{ fontSize: 11, fontWeight: 600, color: "#b45309", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>生产工具</p>
-          <h2 style={{ fontFamily: "'DM Serif Display', Georgia, serif", fontSize: 28, fontWeight: 400, color: "#1c1917", marginBottom: 24 }}>元工具 Meta Skill</h2>
+          <h2 style={{ fontSize: 22, fontWeight: 700, color: "#1c1917", marginBottom: 24 }}>元工具 Meta Skill</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
             {META_SKILLS.map((m) => (
               <a
@@ -215,7 +214,7 @@ function HomeContent() {
         {/* 领域方法论 */}
         <section style={{ marginBottom: 64 }}>
           <p style={{ fontSize: 11, fontWeight: 600, color: "#b45309", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>领域方法论</p>
-          <h2 style={{ fontFamily: "'DM Serif Display', Georgia, serif", fontSize: 28, fontWeight: 400, color: "#1c1917", marginBottom: 24 }}>知识 Skill</h2>
+          <h2 style={{ fontSize: 22, fontWeight: 700, color: "#1c1917", marginBottom: 24 }}>知识 Skill</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {KNOWLEDGE_SKILLS.map((sk) => (
               <div
@@ -335,7 +334,7 @@ function HomeContent() {
         {/* 项目结构 */}
         <section style={{ marginBottom: 64 }}>
           <p style={{ fontSize: 11, fontWeight: 600, color: "#b45309", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>架构</p>
-          <h2 style={{ fontFamily: "'DM Serif Display', Georgia, serif", fontSize: 28, fontWeight: 400, color: "#1c1917", marginBottom: 24 }}>项目结构</h2>
+          <h2 style={{ fontSize: 22, fontWeight: 700, color: "#1c1917", marginBottom: 24 }}>项目结构</h2>
           <div style={{
             padding: "24px 28px",
             background: "#fff",
@@ -348,7 +347,7 @@ function HomeContent() {
               fontSize: 13,
               color: "#57534e",
               lineHeight: 1.9,
-              fontFamily: "'SF Mono', 'Menlo', ui-monospace, monospace",
+              fontFamily: "ui-monospace, 'SF Mono', 'Menlo', monospace",
               overflow: "auto",
             }}>
               {PROJECT_STRUCTURE}
@@ -383,7 +382,7 @@ function HomeContent() {
           paddingTop: 48,
           borderTop: "1px solid #e7e5e4",
         }}>
-          <div style={{ fontFamily: "'DM Serif Display', Georgia, serif", fontSize: 18, fontWeight: 400, color: "#1c1917", marginBottom: 6 }}>Books to Skill</div>
+          <div style={{ fontSize: 16, fontWeight: 700, color: "#1c1917", marginBottom: 6 }}>Books to Skill</div>
           <div style={{ fontSize: 13, color: "#78716c" }}>将书籍转化为可复用技能</div>
         </footer>
       </div>

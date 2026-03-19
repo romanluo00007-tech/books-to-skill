@@ -14,7 +14,7 @@
 | 纯 HTML/CSS/JS | 备选 | 更轻量，但与 showcases 风格统一成本高 |
 | 静态 Markdown | 不推荐 | 交互弱，难以做推荐路径 |
 
-**建议：React + Vite**，和 marketing/strategy showcase 共用同一套视觉体系（深色主题、卡片、导航风格）。
+**建议：React + Vite**，与各 showcase 共用一致的组件和设计语言。
 
 ---
 
@@ -26,7 +26,7 @@
 | B. 多页导航 | 首页 + 各 skill 子页 | 结构清晰 | 增加跳转、可能过度 |
 | C. 单页 + 弹窗 | 主模块在页上，详情用 Modal | 平衡 | 实现稍复杂 |
 
-**建议：方案 A 单页滚动**。Portal 内容量适中（2 个 knowledge skills + 2 个 meta skills，后续扩展销售、产品），单页足够，首屏即可建立全局认知。
+**建议：方案 A 单页滚动**。Portal 内容量适中（4 个 knowledge skills + 2 个 meta skills），单页足够，首屏即可建立全局认知。
 
 ---
 
@@ -61,7 +61,7 @@
 - 副标题：将书籍转化为可复用的 AI 技能
 - 简短说明：覆盖营销、战略、销售、产品等方法论，支持一键安装、场景匹配、知识测试
 
-**设计要点**：保持与 showcases 一致的深色背景和简洁排版。
+**设计要点**：浅色背景、简洁排版，与各 showcase 风格协调。
 
 ---
 
@@ -99,7 +99,7 @@
 - 主色标签（营销金/橙，战略蓝，销售/产品待定）
 - 状态：已有 →「进入展示站」「复制安装命令」；开发中 →「敬请期待」
 
-**数据来源**：从各 skill 的 SKILL.md 或已有 showcase 的配置中抽取。销售、产品预留占位卡片，可配置为 `comingSoon: true`。
+**数据来源**：从各 skill 的 SKILL.md 或 showcase 的配置中抽取。元数据由 `portal/src/config.js` 维护。
 
 ---
 
@@ -142,23 +142,25 @@
 
 ---
 
-## 三、设计语言（与 Showcases 统一）
+## 三、设计语言
+
+Portal 采用浅色主题，与展示站协调：
 
 | 要素 | 取值 |
 |------|------|
-| 背景色 | `#0c0c14` 深色 |
-| 卡片背景 | `#16161e`，边框 `#222` |
-| 主文字 | `#e5e5e5` |
-| 次要文字 | `#888` / `#666` |
-| 强调色 | 按模块：营销 `#f0c040`，战略 `#4a90d9`，销售待定，产品待定，Meta `#9b59b6` |
+| 背景色 | `#faf8f5` 浅色 |
+| 卡片背景 | `#fff`，边框 `#e7e5e4` |
+| 主文字 | `#1c1917` |
+| 次要文字 | `#57534e` / `#78716c` |
+| 强调色 | 按模块：营销 `#f0c040`，战略 `#4a90d9`，销售 `#e74c3c`，产品 `#06b6d4`，Meta `#9b59b6` |
 | 圆角 | 12–14px |
-| 字体 | `-apple-system, 'Noto Sans SC', sans-serif` |
+| 字体 | DM Sans，等宽用于代码块 |
 
 ---
 
 ## 四、实现状态
 
-Portal 已实现：React + Vite、单页滚动、身份推荐、知识 Skill 卡片、Meta Skill 卡片及独立详情页（`/meta/books-to-skill`、`/meta/skill-to-showcase`）。元数据由 `portal/src/config.js` 集中维护。
+Portal 已实现：React + Vite、单页滚动、身份推荐、知识 Skill 卡片、Meta Skill 卡片及独立详情页（`/meta/books-to-skill`、`/meta/skill-to-showcase`）。Meta 详情页含设计理念、核心资产、流程、输出结构等完整说明。元数据由 `portal/src/config.js`、`portal/src/metaContent.js` 集中维护。
 
 ---
 
