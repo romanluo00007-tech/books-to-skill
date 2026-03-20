@@ -82,8 +82,7 @@ function HomeContent() {
 
         {/* 快速入口 — 行动导向，每选项直达 */}
         <section style={{ marginBottom: 64 }}>
-          <p style={{ fontSize: 11, fontWeight: 600, color: "#b45309", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>快速入口</p>
-          <p style={{ fontSize: 15, color: "#57534e", marginBottom: 20 }}>选一个，直接去</p>
+          <p style={{ fontSize: 11, fontWeight: 600, color: "#b45309", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20 }}>快速入口</p>
 
           {/* 路径 1：我是咨询顾问 */}
           <div style={{
