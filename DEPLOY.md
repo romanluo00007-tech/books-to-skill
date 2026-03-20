@@ -50,7 +50,7 @@ vercel
 dist/
 ├── index.html          ← 门户首页 /，也用于 /meta/* SPA 回退
 ├── assets/
-├── serve.json          ← 仅对 /meta/* 做 SPA fallback
+├── serve.json          ← 对 /meta/*、/case-library 做 SPA fallback
 ├── showcases/
 │   ├── marketing/      ← /showcases/marketing/
 │   ├── strategy/       ← /showcases/strategy/
@@ -59,10 +59,10 @@ dist/
 ```
 
 - **门户首页**：`/` → Portal
-- **Meta 页面**：`/meta/books-to-skill`、`/meta/skill-to-showcase` → Portal SPA 路由
+- **Meta 页面与案例库**：`/meta/books-to-skill`、`/meta/skill-to-showcase`、`/case-library` → Portal SPA 路由
 - **展示页**：`/showcases/*` → 各自独立展示站
 
-本地预览使用 `serve` + `serve.json`，仅对 `/meta/*` 做 SPA 回退，`/showcases/*` 正常返回静态文件。
+本地预览使用 `serve` + `serve.json`，对 `/meta/*`、`/case-library` 做 SPA 回退，`/showcases/*` 正常返回静态文件。
 
 ## 五、可选：绑定自定义域名
 
