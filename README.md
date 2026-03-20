@@ -12,7 +12,8 @@ books-to-skill/
 │   ├── marketing/             # 营销方法论 (9 frameworks)
 │   ├── strategy/              # 战略方法论 (6 frameworks)
 │   ├── sales/                 # 销售方法论 (6 frameworks)
-│   └── product/               # 产品方法论 (6 frameworks)
+│   ├── product/               # 产品方法论 (6 frameworks)
+│   └── case-library/          # 案例库 (创作者用，来源可追溯)
 ├── meta/                      # 元工具 Meta Skill
 │   ├── books-to-skill/        # 书籍 → Skill
 │   └── skill-to-showcase/     # Skill → 展示网页
@@ -90,6 +91,7 @@ npm run dev:marketing   # 营销展示站
 | 路径 | 说明 |
 |------|------|
 | `/` | 门户首页 |
+| `/case-library` | 案例库（来源可追溯的商业案例，供创作者使用） |
 | `/meta/books-to-skill` | 书籍转 Skill 元工具说明 |
 | `/meta/skill-to-showcase` | Skill 转展示网页元工具说明 |
 | `/showcases/marketing/` | 营销方法论展示 |

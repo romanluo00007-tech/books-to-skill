@@ -50,6 +50,17 @@ export const KNOWLEDGE_SKILLS = [
   },
 ];
 
+// 创作者 Skill（案例库）
+export const CREATOR_SKILLS = [
+  {
+    id: "case-library",
+    name: "案例库",
+    one: "来源可追溯的商业案例，供写作、内容、示例使用",
+    color: "#2563eb",
+    pagePath: "/case-library",
+  },
+];
+
 // 元工具
 export const META_SKILLS = [
   {
@@ -108,7 +119,8 @@ export const PROJECT_STRUCTURE = `books-to-skill/
 │   ├── marketing/          # 营销方法论 (9 frameworks)
 │   ├── strategy/           # 战略方法论 (6 frameworks)
 │   ├── sales/              # 销售方法论 (6 frameworks)
-│   └── product/            # 产品方法论 (6 frameworks)
+│   ├── product/            # 产品方法论 (6 frameworks)
+│   └── case-library/       # 案例库 (创作者用)
 ├── meta/
 │   ├── books-to-skill/     # 书籍→skill 元工具
 │   └── skill-to-showcase/ # skill→展示网页 元工具

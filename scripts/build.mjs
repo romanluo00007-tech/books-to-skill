@@ -36,10 +36,11 @@ for (const name of showcases) {
   cpSync(join(showcaseDir, 'dist'), outDir, { recursive: true });
 }
 
-// 3. 写入 serve.json：仅对 /meta/* 做 SPA fallback，/showcases/* 正常返回静态文件
+// 3. 写入 serve.json：对 /meta/*、/case-library 做 SPA fallback，/showcases/* 正常返回静态文件
 writeFileSync(join(dist, 'serve.json'), JSON.stringify({
   rewrites: [
-    { "source": "/meta/:path*", "destination": "/index.html" }
+    { "source": "/meta/:path*", "destination": "/index.html" },
+    { "source": "/case-library", "destination": "/index.html" }
   ]
 }, null, 2));
 

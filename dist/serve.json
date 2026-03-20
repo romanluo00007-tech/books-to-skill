@@ -3,6 +3,10 @@
     {
       "source": "/meta/:path*",
       "destination": "/index.html"
+    },
+    {
+      "source": "/case-library",
+      "destination": "/index.html"
     }
   ]
 }

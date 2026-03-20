@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { KNOWLEDGE_SKILLS, META_SKILLS, COMING_SOON_DOMAINS, PROJECT_STRUCTURE, GITHUB_URL } from "./config";
+import { KNOWLEDGE_SKILLS, META_SKILLS, CREATOR_SKILLS, COMING_SOON_DOMAINS, PROJECT_STRUCTURE, GITHUB_URL } from "./config";
 import BooksToSkillPage from "./pages/BooksToSkillPage";
 import SkillToShowcasePage from "./pages/SkillToShowcasePage";
+import CaseLibraryPage from "./pages/CaseLibraryPage";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeContent />} />
+        <Route path="/case-library" element={<CaseLibraryPage />} />
         <Route path="/meta/books-to-skill" element={<BooksToSkillPage />} />
         <Route path="/meta/skill-to-showcase" element={<SkillToShowcasePage />} />
       </Routes>
@@ -126,6 +128,7 @@ function HomeContent() {
           {/* 路径 2：做 Skill */}
           <div style={{
             padding: "20px 20px 18px",
+            marginBottom: 16,
             background: "#fff",
             border: "1px solid #e7e5e4",
             borderLeft: "4px solid #8b5cf6",
@@ -165,6 +168,53 @@ function HomeContent() {
                 >
                   <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#8b5cf6" }} />
                   {m.label} →
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* 路径 3：我是创作者 */}
+          <div style={{
+            padding: "20px 20px 18px",
+            background: "#fff",
+            border: "1px solid #e7e5e4",
+            borderLeft: "4px solid #2563eb",
+            borderRadius: 12,
+            boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+          }}>
+            <div style={{ fontSize: 14, fontWeight: 600, color: "#1c1917", marginBottom: 4 }}>我是创作者</div>
+            <div style={{ fontSize: 12, color: "#78716c", marginBottom: 14 }}>来源可追溯的商业案例，供写作、内容、示例使用</div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+              {CREATOR_SKILLS.map((sk) => (
+                <a
+                  key={sk.id}
+                  href={sk.pagePath}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    padding: "12px 18px",
+                    background: "#fff",
+                    border: `1px solid ${sk.color}40`,
+                    borderRadius: 10,
+                    fontSize: 15,
+                    fontWeight: 600,
+                    color: sk.color,
+                    textDecoration: "none",
+                    transition: "all 0.2s",
+                    boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = `${sk.color}12`;
+                    e.currentTarget.style.boxShadow = `0 4px 14px ${sk.color}25`;
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = "#fff";
+                    e.currentTarget.style.boxShadow = "0 1px 3px rgba(0,0,0,0.04)";
+                  }}
+                >
+                  <span style={{ width: 8, height: 8, borderRadius: "50%", background: sk.color }} />
+                  {sk.name} →
                 </a>
               ))}
             </div>

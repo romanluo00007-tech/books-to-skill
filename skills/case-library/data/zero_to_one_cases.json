@@ -1,0 +1,352 @@
+{
+  "book_id": "zero_to_one_thiel",
+  "book_title": "Zero to One",
+  "book_author": "Peter Thiel with Blake Masters",
+  "book_language": "en",
+  "total_cases": 10,
+  "extraction_date": "2026-03-20",
+  "source_pages_range": "5-178",
+  "cases": [
+    {
+      "case_id": "zero_to_one_thiel_001",
+      "book_id": "zero_to_one_thiel",
+      "title": "PayPal races to raise $100M before the dot-com crash",
+      "title_zh": "PayPal 在互联网泡沫崩盘前紧急融资 1 亿美元",
+      "who": ["Peter Thiel"],
+      "company": ["PayPal"],
+      "when": "February-March 2000",
+      "where": "Silicon Valley",
+      "before_state": "It was late 1999. Dot-com mania was at its peak — startups were flipping in weeks, and everyone in the Valley seemed ready to believe anything. PayPal was growing fast but had yet to make a profit. Thiel was scared — not because he doubted PayPal, but because the whole market felt unhinged.",
+      "before_state_zh": "1999 年末，互联网泡沫达到顶峰——创业公司几周内就能转手，硅谷人人似乎什么都信。PayPal 增长很快但尚未盈利。Thiel 很害怕——不是怀疑 PayPal，而是整个市场已失控。",
+      "trigger": "On February 16, 2000, the Wall Street Journal ran a story lauding PayPal's viral growth and suggesting the company was worth $500 million. Thiel knew the crash was coming and moved to raise capital while the window was still open.",
+      "trigger_zh": "2000 年 2 月 16 日，《华尔街日报》发文盛赞 PayPal 的病毒式增长，估值 5 亿美元。Thiel 知道崩盘将至，趁窗口还在抓紧融资。",
+      "action": "PayPal raised $100 million in March 2000. Their lead investor took the Journal's back-of-the-envelope valuation as gospel. The team didn't celebrate — they saw the round as insurance against the coming storm, not validation.",
+      "action_zh": "PayPal 在 2000 年 3 月融资 1 亿美元。领投方把《华尔街日报》的粗略估值当圣经。团队没有庆祝——他们把这轮融资视为应对风暴的保险，而非认可。",
+      "result": "The NASDAQ peaked at 5,048 in mid-March 2000 and crashed to 3,321 by mid-April. By October 2002 it bottomed at 1,114. PayPal survived because they had the cash reserves. Most dot-com companies didn't.",
+      "result_zh": "纳斯达克在 2000 年 3 月中旬见顶 5048 点，4 月跌至 3321，2002 年 10 月触底 1114。PayPal 因有现金储备活了下来，多数互联网公司没有。",
+      "after_state": "PayPal went public in February 2002 and was acquired by eBay for $1.5 billion later that year. The team — later known as the PayPal Mafia — went on to found or fund Tesla, SpaceX, LinkedIn, YouTube, Palantir, and Yelp.",
+      "after_state_zh": "PayPal 于 2002 年 2 月上市，同年被 eBay 以 15 亿美元收购。这支团队——后来的「PayPal 黑帮」——陆续创立或投资了 Tesla、SpaceX、LinkedIn、YouTube、Palantir 和 Yelp。",
+      "hard_numbers": [
+        "$500 million — Wall Street Journal's estimated PayPal valuation, Feb 2000",
+        "$100 million — fundraise completed March 2000",
+        "5,048 — NASDAQ peak, mid-March 2000",
+        "1,114 — NASDAQ bottom, October 2002",
+        "$1.5 billion — eBay's acquisition of PayPal, 2002"
+      ],
+      "quotes": [
+        {"text": "I was scared out of my wits — not because I didn't believe in our company, but because it seemed like everyone else in the Valley was ready to believe anything at all.", "text_zh": "我吓得魂不附体——不是不相信自己的公司，而是硅谷其他人似乎什么都愿意相信。", "speaker": "Peter Thiel", "page": 17},
+        {"text": "Getting that round was the most important business decision we ever made.", "text_zh": "拿到那轮融资是我们做过最重要的商业决策。", "speaker": "Peter Thiel", "page": 18}
+      ],
+      "themes": ["crisis", "fundraising", "founding"],
+      "domains": ["tech", "finance"],
+      "narrative_function": ["turning_point", "foreshadowing"],
+      "concepts": ["market timing", "contrarian thinking", "capital as insurance", "survival over growth"],
+      "concepts_zh": ["市场时机", "逆向思维", "资本即保险", "生存优先于增长"],
+      "page_start": 17,
+      "page_end": 19,
+      "source_excerpt": "When I was running PayPal in late 1999, I was scared out of my wits—not because I didn't believe in our company, but because it seemed like everyone else in the Valley was ready to believe anything at all. Everywhere I looked, people were starting and flipping companies with alarming casualness... we moved fast to raise funds while we could. On February 16, 2000, the Wall Street Journal ran a story lauding our viral growth and suggesting that PayPal was worth $500 million. When we raised $100 million the next month, our lead investor took the Journal's back-of-the-envelope valuation as gospel.",
+      "original_language": "en",
+      "arc": {"arc_name": "The PayPal story", "position": 1, "total": 5},
+      "related_cases": [
+        {"case_id": "zero_to_one_thiel_002", "relation": "sequel"},
+        {"case_id": "zero_to_one_thiel_006", "relation": "sequel"}
+      ]
+    },
+    {
+      "case_id": "zero_to_one_thiel_002",
+      "book_id": "zero_to_one_thiel",
+      "title": "75% of PayPal's value came from profits beyond 2011",
+      "who": ["Peter Thiel"],
+      "company": ["PayPal"],
+      "when": "March 2001",
+      "where": "Silicon Valley",
+      "before_state": "PayPal had survived the dot-com crash but still hadn't turned a profit. Revenue was growing 100% year-over-year, but conventional wisdom said unprofitable internet companies were worthless.",
+      "trigger": "Thiel projected PayPal's future cash flows and discovered something counterintuitive: 75% of the company's present value would come from profits generated in 2011 and beyond — a full decade away.",
+      "action": "Thiel used this insight to reframe how PayPal should be valued. Rather than focusing on current profitability (which was zero), he argued the company's worth was almost entirely in its future monopoly position in online payments.",
+      "result": "The analysis proved correct. PayPal's most profitable years came long after the founding team had moved on. The company's transaction volume and margins expanded massively through the 2010s.",
+      "after_state": "This framework — that most of a tech company's value lies far in the future — became central to Thiel's investment thesis and influenced how Silicon Valley thinks about startup valuation.",
+      "hard_numbers": [
+        "75% — share of PayPal's present value from profits after 2011",
+        "100% — PayPal's year-over-year revenue growth in March 2001",
+        "27 months — PayPal's age when this analysis was done"
+      ],
+      "quotes": [
+        {"text": "Most of the value of low-growth businesses is in the near term. A nightclub or a restaurant can be profitable for a year or two, but they don't have much long-term value.", "speaker": "Peter Thiel", "page": 41}
+      ],
+      "themes": ["scaling", "founding"],
+      "domains": ["tech", "finance"],
+      "narrative_function": ["turning_point", "contrast_pair"],
+      "concepts": ["long-term value", "future cash flows", "monopoly advantage", "patience in building"],
+      "page_start": 41,
+      "page_end": 42,
+      "source_excerpt": "In March 2001, PayPal had yet to make a profit but our revenues were growing 100% year-over-year. When I projected our future cash flows, I found that 75% of the company's present value would come from profits generated in 2011 and beyond—hard to believe for a company that had been in business for only 27 months.",
+      "original_language": "en",
+      "arc": {"arc_name": "The PayPal story", "position": 2, "total": 5},
+      "related_cases": [
+        {"case_id": "zero_to_one_thiel_001", "relation": "prequel"}
+      ]
+    },
+    {
+      "case_id": "zero_to_one_thiel_003",
+      "book_id": "zero_to_one_thiel",
+      "title": "Google disguises its monopoly as a small player in a huge market",
+      "who": ["Eric Schmidt"],
+      "company": ["Google"],
+      "when": "2012",
+      "where": "Silicon Valley",
+      "before_state": "Google dominated search with 68% market share. But publicly, the company framed itself as just another tech company competing in a giant market.",
+      "trigger": "In congressional testimony, Google chairman Eric Schmidt described Google's competitive landscape by defining Google's market as 'advertising' or 'technology' rather than 'search.'",
+      "action": "By framing their market as the union of search, mobile phones, wearable computers, and self-driving cars, Google made their dominance seem trivial. In a $964 billion global consumer tech market, Google's non-search revenue was only $2.35 billion — less than 0.24% of the market.",
+      "result": "The framing worked. Google avoided serious antitrust action for years. Meanwhile, 95% of its revenue still came from search advertising — a market it essentially owned.",
+      "after_state": "Thiel used Google as his prime example of how monopolists disguise their power, while competitive businesses exaggerate their uniqueness. This became one of the book's most influential frameworks.",
+      "hard_numbers": [
+        "68% — Google's share of the search market",
+        "95% — Google's revenue from search advertising",
+        "$2.35 billion — Google's non-search revenue in 2012",
+        "$964 billion — global consumer tech market size",
+        "0.24% — Google's share of global consumer tech"
+      ],
+      "quotes": [
+        {"text": "Google is not just a search company. We do many other things.", "speaker": "Eric Schmidt", "page": 29}
+      ],
+      "themes": ["competition", "scaling"],
+      "domains": ["tech"],
+      "narrative_function": ["contrast_pair"],
+      "concepts": ["market framing", "monopoly disguise", "competitive narrative", "defining your category"],
+      "page_start": 26,
+      "page_end": 29,
+      "source_excerpt": "Think about how Google talks about its business. It certainly doesn't claim to be a monopoly. But is it one? Well, it depends: a monopoly in what? 95% of Google's revenue comes from search advertising; its other products generated just $2.35 billion in 2012, and its consumer tech products a mere fraction of that. Since consumer tech is a $964 billion market globally, Google owns less than 0.24% of it.",
+      "original_language": "en",
+      "arc": {"arc_name": "Monopoly vs competition", "position": 1, "total": 3},
+      "related_cases": [
+        {"case_id": "zero_to_one_thiel_004", "relation": "contrast"}
+      ]
+    },
+    {
+      "case_id": "zero_to_one_thiel_004",
+      "book_id": "zero_to_one_thiel",
+      "title": "A Mountain View restaurant pretends it has a monopoly",
+      "who": [],
+      "company": [],
+      "when": "2014",
+      "where": "Mountain View, California",
+      "before_state": "Mountain View was filled with dozens of nearly identical restaurants, all competing fiercely on price, ambiance, and marginal differentiation.",
+      "trigger": "Thiel observed that restaurant owners in competitive markets do the exact opposite of what Google does — they exaggerate their uniqueness to make themselves feel special.",
+      "action": "A restaurant owner might claim to be 'the only British food restaurant in Palo Alto.' This is technically true, but it obscures the competitive reality: the relevant market is all restaurants in the area, not just British food ones. The owner narrows the market definition to create an illusion of monopoly.",
+      "result": "These restaurants still fail at high rates because their differentiation is trivial. The framing trick works on the owner's psychology, not on market reality.",
+      "after_state": "Thiel paired this example with the Google case to create his signature 2x2: monopolists expand their market definition to look competitive, while competitive businesses narrow theirs to feel like monopolists.",
+      "hard_numbers": [],
+      "quotes": [
+        {"text": "If you lose sight of competitive reality and focus on trivial differentiating factors — maybe you think your naan is superior because of your great-grandmother's recipe — your business is unlikely to survive.", "speaker": "Peter Thiel", "page": 28}
+      ],
+      "themes": ["competition", "failure"],
+      "domains": ["retail"],
+      "narrative_function": ["contrast_pair", "comic_relief"],
+      "concepts": ["market definition", "competitive self-deception", "differentiation illusion"],
+      "page_start": 27,
+      "page_end": 28,
+      "source_excerpt": "Non-monopolists exaggerate their distinction by defining their market as the intersection of various smaller markets... Suppose you're running one of those restaurants in Mountain View. If you lose sight of competitive reality and focus on trivial differentiating factors—maybe you think your naan is superior because of your great-grandmother's recipe—your business is unlikely to survive.",
+      "original_language": "en",
+      "arc": {"arc_name": "Monopoly vs competition", "position": 2, "total": 3},
+      "related_cases": [
+        {"case_id": "zero_to_one_thiel_003", "relation": "contrast"}
+      ]
+    },
+    {
+      "case_id": "zero_to_one_thiel_005",
+      "book_id": "zero_to_one_thiel",
+      "title": "Microsoft vs Google: the war that almost destroyed both",
+      "who": ["Bill Gates", "Eric Schmidt"],
+      "company": ["Microsoft", "Google"],
+      "when": "2004-2013",
+      "where": "Silicon Valley / Redmond",
+      "before_state": "Microsoft built operating systems and office software. Google built a search engine. As startups, they had no reason to fight — their businesses were entirely separate.",
+      "trigger": "As both companies grew, they began to see each other as threats. Google launched Chrome OS and Google Docs to attack Microsoft's core. Microsoft launched Bing to attack Google's.",
+      "action": "The two companies spent a decade in a war across browsers, mobile, search, office software, and advertising. Meanwhile, Apple — which stayed focused on building its own distinct products — quietly surpassed them both in market cap.",
+      "result": "While Microsoft and Google fought, Apple's market cap rose from $6 billion in January 2000 to $500 billion by December 2012. The war distracted both companies from more productive innovation.",
+      "after_state": "Thiel used this as his central parable for why competition is destructive. Like Shakespeare's Montagues and Capulets, the two houses destroyed value by fighting each other rather than creating new things.",
+      "hard_numbers": [
+        "$6 billion — Apple's market cap, January 2000",
+        "$500 billion — Apple's market cap, December 2012"
+      ],
+      "quotes": [
+        {"text": "Competition can make people hallucinate opportunities where none exist.", "speaker": "Peter Thiel", "page": 37},
+        {"text": "If you can recognize competition as a destructive force instead of a sign of value, you're already more sane than most.", "speaker": "Peter Thiel", "page": 37}
+      ],
+      "themes": ["competition", "failure", "leadership"],
+      "domains": ["tech"],
+      "narrative_function": ["escalation", "contrast_pair"],
+      "concepts": ["destructive competition", "opportunity cost of rivalry", "focus vs distraction"],
+      "page_start": 36,
+      "page_end": 37,
+      "source_excerpt": "As a startup, each clan had been content to leave the other alone and prosper independently. But as they grew, they began to focus on each other. The result? Windows vs. Chrome OS, Bing vs. Google Search, Explorer vs. Chrome, Office vs. Docs, and Surface vs. Nexus... Just as war cost the Montagues and Capulets their children, it cost Microsoft and Google their dominance: Apple came along and surpassed them both.",
+      "original_language": "en",
+      "arc": {"arc_name": "Monopoly vs competition", "position": 3, "total": 3},
+      "related_cases": [
+        {"case_id": "zero_to_one_thiel_003", "relation": "thematic"}
+      ]
+    },
+    {
+      "case_id": "zero_to_one_thiel_006",
+      "book_id": "zero_to_one_thiel",
+      "title": "PayPal's human-machine fraud detection system",
+      "who": ["Peter Thiel", "Max Levchin"],
+      "company": ["PayPal"],
+      "when": "mid-2000",
+      "where": "Silicon Valley",
+      "before_state": "PayPal had survived the dot-com crash and was growing fast, but faced a massive fraud problem. Organized crime syndicates from Russia were using stolen identities and credit cards to extract millions through the platform.",
+      "trigger": "PayPal was losing over $10 million per month to fraud. If they couldn't solve it, the company would die — not from the market crash, but from criminals.",
+      "action": "Max Levchin and his engineers first tried to write software to automatically detect fraud. But the fraudsters adapted faster than the algorithms. So they developed a hybrid approach: software flagged the most suspicious transactions, and human analysts made the final call. Neither machines nor humans alone could have solved it.",
+      "result": "The human-computer hybrid system worked. Fraud losses dropped dramatically. The approach became the foundation of PayPal's competitive advantage in payment security.",
+      "after_state": "Thiel took this lesson and co-founded Palantir Technologies in 2004, applying the same principle — human judgment augmented by machine intelligence — to counterterrorism and intelligence analysis. Palantir grew to be worth over $20 billion.",
+      "hard_numbers": [
+        "$10 million+ per month — PayPal's fraud losses at peak",
+        "2004 — Palantir founded based on this insight",
+        "$20 billion+ — Palantir's later valuation"
+      ],
+      "quotes": [
+        {"text": "The best results come from humans and computers working together, not from either working alone.", "speaker": "Peter Thiel", "page": 135}
+      ],
+      "themes": ["product", "founding", "crisis"],
+      "domains": ["tech", "finance"],
+      "narrative_function": ["origin_myth", "turning_point"],
+      "concepts": ["human-machine complementarity", "problem reframing", "crisis as origin story", "building from adversity"],
+      "page_start": 135,
+      "page_end": 137,
+      "source_excerpt": "In mid-2000, we had survived the dot-com crash and we were growing fast, but we faced one huge problem: we were losing upwards of $10 million to credit card fraud every month. Since our net revenue at the time was only around $5 million, if we didn't solve the problem we'd be dead... We found the answer: a hybrid approach. Instead of letting the algorithms decide on their own, we used them to flag suspicious transactions and then had a team of human analysts review them.",
+      "original_language": "en",
+      "arc": {"arc_name": "The PayPal story", "position": 3, "total": 5},
+      "related_cases": [
+        {"case_id": "zero_to_one_thiel_001", "relation": "prequel"}
+      ]
+    },
+    {
+      "case_id": "zero_to_one_thiel_007",
+      "book_id": "zero_to_one_thiel",
+      "title": "Facebook started by monopolizing one school, not targeting the world",
+      "who": ["Mark Zuckerberg"],
+      "company": ["Facebook"],
+      "when": "2004",
+      "where": "Harvard University, Cambridge MA",
+      "before_state": "Social networking existed — Friendster launched in 2002, MySpace in 2003. Both targeted everyone from day one. The conventional wisdom was that social networks needed to be as large as possible to be valuable.",
+      "trigger": "Mark Zuckerberg took the opposite approach. Instead of launching for all people everywhere, he built Facebook exclusively for Harvard students.",
+      "action": "Facebook's first product was designed to get every single Harvard student signed up — a tiny market of a few thousand people. Only after dominating Harvard did it expand to other Ivy League schools, then all colleges, then high school students, and eventually everyone.",
+      "result": "By starting small and monopolizing each micro-market before expanding, Facebook achieved near-total penetration at each stage. This created genuine network effects that Friendster and MySpace never achieved.",
+      "after_state": "Facebook's deliberate sequencing — Harvard → Ivies → colleges → high schools → everyone — became Thiel's go-to example of how to build a monopoly. Start with a tiny market and dominate it completely before expanding.",
+      "hard_numbers": [],
+      "quotes": [
+        {"text": "The perfect target market for a startup is a small group of particular people concentrated together and served by few or no competitors.", "speaker": "Peter Thiel", "page": 48}
+      ],
+      "themes": ["scaling", "product", "founding"],
+      "domains": ["tech", "social_media"],
+      "narrative_function": ["origin_myth", "contrast_pair"],
+      "concepts": ["start small and monopolize", "market sequencing", "network effects", "deliberate expansion"],
+      "page_start": 46,
+      "page_end": 48,
+      "source_excerpt": "Paradoxically, then, network effects businesses must start with especially small markets. Facebook started with just Harvard students—Mark Zuckerberg's first product was designed to get all his classmates signed up, not to attract all people of Earth. This is why successful network businesses rarely look like businesses at first.",
+      "original_language": "en",
+      "arc": null,
+      "related_cases": [
+        {"case_id": "zero_to_one_thiel_004", "relation": "contrast"}
+      ]
+    },
+    {
+      "case_id": "zero_to_one_thiel_008",
+      "book_id": "zero_to_one_thiel",
+      "title": "Thiel's worst-best decision: the Supreme Court clerkship he didn't get",
+      "who": ["Peter Thiel"],
+      "company": [],
+      "when": "early 1990s",
+      "where": "Stanford Law School / Washington D.C.",
+      "before_state": "Thiel was a top law student at Stanford. He competed obsessively for the highest prize in the legal world: a Supreme Court clerkship. Only a few dozen graduates per year out of tens of thousands even had a chance.",
+      "trigger": "Thiel didn't get the clerkship. He was devastated. It felt like total failure — the one thing he'd optimized his entire academic career for.",
+      "action": "Looking back, Thiel realized the clerkship would have trapped him on a narrow, hypercompetitive track. The legal profession is the ultimate 'perfect competition' market — thousands of equally qualified people fighting over the same small prizes.",
+      "result": "Not getting the clerkship freed Thiel to leave law entirely and go to Silicon Valley, where he co-founded PayPal and became a billionaire.",
+      "after_state": "Thiel uses this personal story as his core example of how competition makes people lose sight of what actually matters. He was so focused on winning the tournament that he never asked whether the prize was worth having.",
+      "hard_numbers": [],
+      "quotes": [
+        {"text": "If I had actually clerked on the Supreme Court, I probably would never have left the track laid out for me. It's one of those strange cases where your best decisions look like your worst failures at the time.", "speaker": "Peter Thiel", "page": 34}
+      ],
+      "themes": ["personal", "competition", "pivot"],
+      "domains": ["other"],
+      "narrative_function": ["turning_point", "origin_myth"],
+      "concepts": ["competition trap", "narrow optimization", "blessing in disguise", "path dependency"],
+      "page_start": 34,
+      "page_end": 35,
+      "source_excerpt": "The highest prize in a law student's world is unambiguous: out of tens of thousands of graduates each year, only a few dozen get a Supreme Court clerkship. After clerking on a federal appeals court for a year, I was so close to winning this last competition. If only I got the clerkship, I thought, I would be set for life. But I didn't.",
+      "original_language": "en",
+      "arc": null,
+      "related_cases": []
+    },
+    {
+      "case_id": "zero_to_one_thiel_009",
+      "book_id": "zero_to_one_thiel",
+      "title": "Solyndra and the cleantech graveyard: failing all seven questions",
+      "who": ["John Doerr"],
+      "company": ["Solyndra"],
+      "when": "2006-2011",
+      "where": "Fremont, California",
+      "before_state": "In 2006, billionaire VC John Doerr declared 'green is the new red, white and blue.' Over $50 billion in government subsidies and private investment poured into cleantech startups. Conventional wisdom said energy was the next internet-sized opportunity.",
+      "trigger": "Cleantech companies launched with a shared premise: the world needs clean energy, therefore any clean energy company will succeed. They confused a macro-level social need with a micro-level business opportunity.",
+      "action": "Solyndra became the poster child. It made cylindrical solar panels with no real technological advantage, entered a brutally competitive global market, was run by nontechnical executives, and had no clear path to monopoly. The company won $535 million in federal loan guarantees through political connections rather than product excellence.",
+      "result": "Solyndra filed for bankruptcy in 2011. More than 40 solar manufacturers went bankrupt or shut down between 2010 and 2012. The entire cleantech wave was a catastrophic misallocation of capital.",
+      "after_state": "Thiel developed his '7 Questions' framework from analyzing why cleantech failed: Technology, Timing, Monopoly, People, Distribution, Durability, and Secret. Every successful company must answer all seven correctly.",
+      "hard_numbers": [
+        "$50+ billion — total cleantech investment in the 2000s",
+        "$535 million — Solyndra's federal loan guarantee",
+        "40+ — solar manufacturers that went bankrupt 2010-2012"
+      ],
+      "quotes": [
+        {"text": "Green is the new red, white and blue.", "speaker": "John Doerr", "page": 148},
+        {"text": "Every cleantech company justified itself with conventional truths about the need for a cleaner world. They deluded themselves into believing that an overwhelming social need implied an overwhelming business opportunity.", "speaker": "Peter Thiel", "page": 155}
+      ],
+      "themes": ["failure", "founding", "competition"],
+      "domains": ["energy"],
+      "narrative_function": ["escalation", "contrast_pair"],
+      "concepts": ["social need vs business opportunity", "seven questions framework", "conventional thinking trap", "market definition error"],
+      "page_start": 142,
+      "page_end": 156,
+      "source_excerpt": "Every cleantech company justified itself with conventional truths about the need for a cleaner world. They deluded themselves into believing that an overwhelming social need for alternative energy solutions implied an overwhelming business opportunity for cleantech companies of all kinds... More than 40 solar manufacturers shut down or went bankrupt in 2012 alone.",
+      "original_language": "en",
+      "arc": {"arc_name": "Cleantech rise and fall", "position": 1, "total": 2},
+      "related_cases": [
+        {"case_id": "zero_to_one_thiel_010", "relation": "contrast"}
+      ]
+    },
+    {
+      "case_id": "zero_to_one_thiel_010",
+      "book_id": "zero_to_one_thiel",
+      "title": "Tesla answers all seven questions right while cleantech burns",
+      "who": ["Elon Musk"],
+      "company": ["Tesla"],
+      "when": "2008-2013",
+      "where": "Silicon Valley / Fremont, California",
+      "before_state": "The cleantech industry was collapsing. Dozens of solar companies had gone bankrupt. Investors and the public were turning cynical about all green technology companies.",
+      "trigger": "While other cleantech companies failed on Thiel's seven questions, Tesla quietly answered every single one correctly — the only cleantech company to do so.",
+      "action": "Technology: Tesla's battery tech was genuinely superior. Timing: they entered when battery costs were finally declining. Monopoly: they started with luxury electric sports cars — a tiny niche no one else served. People: Musk was an engineer-CEO, not a salesman-CEO. Distribution: they built their own stores. Durability: they had a 10-year head start. Secret: they saw that 'green' could mean 'cool' — rich people wanted to look good, not just virtuous.",
+      "result": "The Roadster launched in 2008 at $109,000. Only 3,000 were sold. But this tiny niche funded the Model S, which funded the Model 3, which made Tesla the most valuable car company in the world.",
+      "after_state": "Tesla became Thiel's proof that cleantech's failure was about bad companies, not a bad thesis. The world did need clean energy — it just needed companies that could actually build monopolies.",
+      "hard_numbers": [
+        "$109,000 — Tesla Roadster price",
+        "3,000 — Roadsters sold",
+        "7 for 7 — questions Tesla answered correctly"
+      ],
+      "quotes": [
+        {"text": "Tesla's success proves that there was nothing inherently wrong with cleantech. The biggest idea behind it is right: the world really will need new sources of energy.", "speaker": "Peter Thiel", "page": 160}
+      ],
+      "themes": ["founding", "product", "scaling", "comeback"],
+      "domains": ["automotive", "energy", "tech"],
+      "narrative_function": ["resolution", "contrast_pair"],
+      "concepts": ["answering all seven questions", "niche-first strategy", "fashion meets function", "contrarian correctness"],
+      "page_start": 157,
+      "page_end": 160,
+      "source_excerpt": "Tesla is one of the few cleantech companies started last decade to be thriving today. They rode the social buzz of cleantech better than anyone, but they got the seven questions right, so their success is instructive... Tesla started with a tiny submarket that it could dominate: the market for high-end electric sports cars. Since the first Roadster rolled off the production line in 2008, Tesla's sold only about 3,000 of them, but at $109,000 apiece that's not trivial.",
+      "original_language": "en",
+      "arc": {"arc_name": "Cleantech rise and fall", "position": 2, "total": 2},
+      "related_cases": [
+        {"case_id": "zero_to_one_thiel_009", "relation": "contrast"},
+        {"case_id": "elon_musk_isaacson_003", "relation": "thematic"}
+      ]
+    }
+  ]
+}

@@ -8,6 +8,6 @@
     "dev:strategy": "cd showcases/strategy && npm run dev",
     "dev:sales": "cd showcases/sales && npm run dev",
     "dev:product": "cd showcases/product && npm run dev",
-    "preview": "npm run build && npx serve dist -p 3000"
+    "preview": "npm run build && npx serve dist -p 3000 -s"
   }
 }

@@ -3,6 +3,7 @@
   "outputDirectory": "dist",
   "framework": null,
   "rewrites": [
-    { "source": "/meta/:path*", "destination": "/index.html" }
+    { "source": "/meta/:path*", "destination": "/index.html" },
+    { "source": "/case-library", "destination": "/index.html" }
   ]
 }
