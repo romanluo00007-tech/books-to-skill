@@ -70,6 +70,14 @@ function HomeContent() {
           }}>
             覆盖营销、战略、销售、产品等方法论
           </p>
+          <p style={{
+            fontSize: 13,
+            color: "#a8a29e",
+            letterSpacing: "0.02em",
+            marginTop: 4,
+          }}>
+            提供商业故事、人物传记等真实案例
+          </p>
         </header>
 
         {/* 快速入口 — 行动导向，每选项直达 */}
@@ -77,7 +85,7 @@ function HomeContent() {
           <p style={{ fontSize: 11, fontWeight: 600, color: "#b45309", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>快速入口</p>
           <p style={{ fontSize: 15, color: "#57534e", marginBottom: 20 }}>选一个，直接去</p>
 
-          {/* 路径 1：用方法论 */}
+          {/* 路径 1：我是咨询顾问 */}
           <div style={{
             padding: "20px 20px 18px",
             marginBottom: 16,
@@ -87,7 +95,7 @@ function HomeContent() {
             borderRadius: 12,
             boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
           }}>
-            <div style={{ fontSize: 14, fontWeight: 600, color: "#1c1917", marginBottom: 4 }}>我想用方法论</div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: "#1c1917", marginBottom: 4 }}>我是咨询顾问</div>
             <div style={{ fontSize: 12, color: "#78716c", marginBottom: 14 }}>了解安装方式、框架内容、自测巩固</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
               {KNOWLEDGE_SKILLS.filter(sk => !sk.comingSoon).map((sk) => (
@@ -125,57 +133,10 @@ function HomeContent() {
             </div>
           </div>
 
-          {/* 路径 2：做 Skill */}
+          {/* 路径 2：我是创作者 */}
           <div style={{
             padding: "20px 20px 18px",
             marginBottom: 16,
-            background: "#fff",
-            border: "1px solid #e7e5e4",
-            borderLeft: "4px solid #8b5cf6",
-            borderRadius: 12,
-            boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
-          }}>
-            <div style={{ fontSize: 14, fontWeight: 600, color: "#1c1917", marginBottom: 4 }}>我想自己开发 Skill</div>
-            <div style={{ fontSize: 12, color: "#78716c", marginBottom: 14 }}>书籍转 Skill、Skill 转展示网页</div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-              {META_SKILLS.map((m) => (
-                <a
-                  key={m.id}
-                  href={m.pagePath}
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                    padding: "12px 18px",
-                    background: "#fff",
-                    border: "1px solid #9b59b640",
-                    borderRadius: 10,
-                    fontSize: 14,
-                    fontWeight: 600,
-                    color: "#8b5cf6",
-                    textDecoration: "none",
-                    transition: "all 0.2s",
-                    boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
-                  }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = "#8b5cf612";
-                    e.currentTarget.style.boxShadow = "0 4px 14px rgba(139,92,246,0.2)";
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = "#fff";
-                    e.currentTarget.style.boxShadow = "0 1px 3px rgba(0,0,0,0.04)";
-                  }}
-                >
-                  <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#8b5cf6" }} />
-                  {m.label} →
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* 路径 3：我是创作者 */}
-          <div style={{
-            padding: "20px 20px 18px",
             background: "#fff",
             border: "1px solid #e7e5e4",
             borderLeft: "4px solid #2563eb",
@@ -215,6 +176,53 @@ function HomeContent() {
                 >
                   <span style={{ width: 8, height: 8, borderRadius: "50%", background: sk.color }} />
                   {sk.name} →
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* 路径 3：我是 Skill 开发者 */}
+          <div style={{
+            padding: "20px 20px 18px",
+            background: "#fff",
+            border: "1px solid #e7e5e4",
+            borderLeft: "4px solid #8b5cf6",
+            borderRadius: 12,
+            boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+          }}>
+            <div style={{ fontSize: 14, fontWeight: 600, color: "#1c1917", marginBottom: 4 }}>我是 Skill 开发者</div>
+            <div style={{ fontSize: 12, color: "#78716c", marginBottom: 14 }}>书籍转 Skill、Skill 转展示网页</div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+              {META_SKILLS.map((m) => (
+                <a
+                  key={m.id}
+                  href={m.pagePath}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    padding: "12px 18px",
+                    background: "#fff",
+                    border: "1px solid #9b59b640",
+                    borderRadius: 10,
+                    fontSize: 14,
+                    fontWeight: 600,
+                    color: "#8b5cf6",
+                    textDecoration: "none",
+                    transition: "all 0.2s",
+                    boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = "#8b5cf612";
+                    e.currentTarget.style.boxShadow = "0 4px 14px rgba(139,92,246,0.2)";
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = "#fff";
+                    e.currentTarget.style.boxShadow = "0 1px 3px rgba(0,0,0,0.04)";
+                  }}
+                >
+                  <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#8b5cf6" }} />
+                  {m.label} →
                 </a>
               ))}
             </div>
