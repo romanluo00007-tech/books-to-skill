@@ -424,7 +424,7 @@ function HomeContent() {
               <div style={{ fontSize: 14, color: "#57534e", lineHeight: 1.6 }}>
                 商业故事、人物传记等真实案例，每条可追溯到书籍与页码
               </div>
-              <div style={{ fontSize: 12, color: "#a8a29e", marginTop: 8 }}>Zero to One · Elon Musk · 22 条案例</div>
+              <div style={{ fontSize: 12, color: "#a8a29e", marginTop: 8 }}>Zero to One · Elon Musk · 37 条案例</div>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 8, flexShrink: 0 }}>
               <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#2563eb" }} />

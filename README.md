@@ -53,6 +53,7 @@ books-to-skill/
 | `portal/.env.local` | 你的 GitHub 账号/组织 | 复制 `.env.example` 为 `.env.local`，填入 `VITE_GITHUB_ORG=你的用户名` |
 | `dist/` | 构建产物 | 每次 `npm run build` 生成，无需提交 |
 | `node_modules/` | 依赖 | 由 `npm install` 安装 |
+| `raw/` | 书籍原始抽取数据 | 案例库的 raw JSON 源文件，不随仓库提交 |
 
 **.gitignore 的作用**：被列在其中的文件，`git add` 时会自动忽略，因此不会进入提交、也不会被 push 到远程。你可以放心在 `.env.local` 里写自己的配置。
 

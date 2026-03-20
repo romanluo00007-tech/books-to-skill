@@ -2,17 +2,17 @@
 """
 Case Library Preprocessor — 案例抽取预处理脚本
 ==============================================
-从按页抽取的书籍 JSON 中，使用 Claude API 提取结构化的商业案例。
+从按页抽取的书籍 JSON 中，使用 Claude API 提取结构化的商业案例（V2 schema）。
 
 用法：
-    python extract_cases.py --input raw.json --output cases.json [--book-id XXX] [--lang auto]
+    python extract_cases.py --input raw.json --output cases.json [--book-id XXX]
 
 流程：
     1. 加载 raw.json（格式：{"pages": [{"page_index": N, "content": "..."}]}）
     2. 过滤无效页（目录、版权、照片说明等）
     3. 按滑动窗口分组（8页一组，重叠2页）
-    4. 每组送 Claude API 提取案例
-    5. 去重 + 合并跨窗口的相同案例
+    4. 每组送 Claude API 提取案例（V2 prompt）
+    5. 去重 + 合并跨窗口的相同案例（V2 字段）
     6. 输出结构化 cases.json
 """
 
@@ -20,7 +20,6 @@ import json
 import argparse
 import hashlib
 import time
-import sys
 import os
 from typing import Optional
 
@@ -36,47 +35,85 @@ MAX_RETRIES = 3
 RETRY_DELAY = 5       # 秒
 
 # ──────────────────────────────────────────────
-# Claude API 调用
+# V2 提取 Prompt
 # ──────────────────────────────────────────────
 
-EXTRACTION_SYSTEM_PROMPT = """You are a precise case study extractor for business and entrepreneurship books.
+EXTRACTION_SYSTEM_PROMPT = """You are a precise case study extractor for business books.
 
 Your job is to identify CONCRETE STORIES and SPECIFIC ANECDOTES from the provided book pages.
 A "case" is a specific event, decision, turning point, or episode involving real people and companies.
 
 CRITICAL RULES:
-1. ONLY extract information that is EXPLICITLY stated in the provided text. Never infer, assume, or fabricate details.
-2. Each case MUST have specific page numbers where the information appears.
-3. The summary must be faithful to the original text — use the book's own facts, names, dates, and details.
-4. If the text is in a non-English language, write the case summary in BOTH the original language AND English.
-5. Tag each case with relevant categories from this taxonomy:
-   - THEME: founding, fundraising, crisis, pivot, scaling, competition, leadership, product, culture, acquisition, failure, comeback, personal
-   - DOMAIN: tech, finance, manufacturing, energy, space, automotive, social_media, retail, other
-6. Extract the KEY QUOTE if there is a memorable direct quote in the original text (keep it under 30 words, in original language).
+1. ONLY extract information EXPLICITLY stated in the text. Never infer or fabricate.
+2. Each case MUST have specific page numbers.
+3. If the text is non-English, write story fields in BOTH English AND original language.
+4. Prefer MORE cases with SHORTER summaries over fewer cases with long ones.
+5. Every field must come from what's on the page — if you don't see a number, don't invent one.
 
 DO NOT extract:
-- Table of contents, chapter titles, photo captions
-- General philosophical musings without a specific event
-- Background information that doesn't constitute a "story"
+- Table of contents, chapter titles, photo captions, acknowledgments
+- General philosophy or arguments without a specific event
+- Background exposition that doesn't constitute a "story with actors"
 
-Respond ONLY with a JSON array. No markdown, no explanation. If no cases are found, respond with [].
+Respond ONLY with a JSON array. No markdown, no explanation. If no cases found, respond with [].
 
-Each case object must have exactly these fields:
+Each case object must have EXACTLY these fields:
+
 {
-  "title_en": "Short English title (max 10 words)",
-  "title_original": "Short title in the book's language (if not English, otherwise same as title_en)",
-  "summary_en": "2-4 sentence English summary of the specific event/story",
-  "summary_original": "2-4 sentence summary in the book's language (if not English, otherwise same as summary_en)",
-  "page_start": <first page number where this case appears>,
-  "page_end": <last page number where this case appears>,
-  "characters": ["List", "of", "people", "involved"],
-  "companies": ["List", "of", "companies", "mentioned"],
-  "year_or_period": "e.g. '1995' or '1989-1990' or 'early 1980s'",
-  "themes": ["from the taxonomy above"],
-  "domains": ["from the taxonomy above"],
-  "key_quote": "A memorable direct quote from the text, or null",
-  "key_quote_page": <page number of the quote, or null>
-}"""
+  "title": "Short headline, max 15 words, English",
+  "who": ["Real names of people involved"],
+  "company": ["Companies involved, empty array if none"],
+  "when": "Year, range, or era, e.g. '2008' or 'early 1990s'",
+  "where": "Location or setting",
+
+  "before_state": "1-2 sentences. What was the situation RIGHT BEFORE this story? Sets the stakes.",
+  "trigger": "1-2 sentences. The inciting event — what kicked things off.",
+  "action": "2-4 sentences. What the protagonist DID. The core narrative.",
+  "result": "1-2 sentences. Immediate outcome.",
+  "after_state": "1-2 sentences. Where things stood after. The contrast with before_state.",
+
+  "hard_numbers": ["Specific citable data: dollars, dates, percentages, headcounts. Only from the text."],
+
+  "quotes": [
+    {
+      "text": "Exact quote from the book, in original language",
+      "translation": "English translation if original is not English, otherwise null",
+      "speaker": "Who said it",
+      "page": 42
+    }
+  ],
+
+  "themes": ["from: founding, fundraising, crisis, pivot, scaling, competition, leadership, product, culture, acquisition, failure, comeback, personal, negotiation, hiring, firing, fraud"],
+  "domains": ["from: tech, finance, automotive, space, energy, social_media, retail, manufacturing, healthcare, media, transport, real_estate, other"],
+  "narrative_function": ["from: origin_myth, turning_point, contrast_pair, escalation, resolution, comic_relief, foreshadowing"],
+  "concepts": ["Free-form abstract concepts this case illustrates, e.g. 'market timing', 'founder resilience'"],
+
+  "page_start": 42,
+  "page_end": 44,
+  "source_excerpt": "The most relevant 2-4 sentences VERBATIM from the book. This is the evidence anchor.",
+  "original_language": "en"
+}
+
+IMPORTANT on quotes:
+- Include 1-3 quotes per case, from DIFFERENT speakers when possible
+- Only include quotes that are DIRECT SPEECH marked with quotation marks in the original text
+- Include the page number for each quote
+
+IMPORTANT on hard_numbers:
+- Only include numbers explicitly stated in the text
+- Format as "number — what it refers to", e.g. "$1.5 billion — eBay acquisition of PayPal"
+- Dates count as hard numbers if they anchor the timeline
+
+IMPORTANT on source_excerpt:
+- This must be VERBATIM text from the book, not your summary
+- Pick the most vivid/specific passage, not the most general one
+- Keep it to 2-4 sentences maximum"""
+
+# V2 案例 schema 中的列表字段（合并时取并集去重）
+V2_LIST_FIELDS = ("who", "company", "hard_numbers", "themes", "domains", "narrative_function", "concepts")
+
+# V2 案例 schema 中的叙事字段（合并时保留更长的）
+V2_NARRATIVE_FIELDS = ("before_state", "trigger", "action", "result", "after_state", "source_excerpt")
 
 
 def call_claude_api(pages_text: str, api_key: Optional[str] = None) -> list:
@@ -143,13 +180,16 @@ def call_claude_api(pages_text: str, api_key: Optional[str] = None) -> list:
 # 页面预处理
 # ──────────────────────────────────────────────
 
-def load_book(filepath: str) -> list:
-    """加载 raw.json 并返回有效页面列表"""
+def load_book(filepath: str) -> tuple[list, dict]:
+    """加载 raw.json 并返回 (有效页面列表, 元数据)"""
     with open(filepath, "r", encoding="utf-8") as f:
         data = json.load(f)
 
     pages = data.get("pages", [])
     print(f"📖 加载了 {len(pages)} 页原始数据")
+
+    # 提取元数据（若有）
+    meta = {k: data[k] for k in ("book_title", "book_author", "book_language") if k in data}
 
     # 过滤无效页面
     valid = []
@@ -159,19 +199,16 @@ def load_book(filepath: str) -> list:
         content = p.get("content", "").strip()
         idx = p.get("page_index", 0)
 
-        # 跳过太短的页面（通常是照片说明、章节标题等）
         if len(content) < MIN_PAGE_CHARS:
             skipped_types["short"] += 1
             continue
 
-        # 跳过目录页（包含大量章节编号/冒号的页面）
         colon_count = content.count(":")
         line_count = content.count("\n") + 1
         if colon_count > 5 and colon_count / max(line_count, 1) > 0.4:
             skipped_types["toc"] += 1
             continue
 
-        # 跳过版权/出版信息页
         credit_signals = ["isbn", "copyright", "editora", "publisher", "all rights reserved",
                           "créditos", "sobre o autor", "agradecimentos"]
         if any(sig in content.lower() for sig in credit_signals) and len(content) < 500:
@@ -182,7 +219,7 @@ def load_book(filepath: str) -> list:
 
     print(f"✅ 有效页面: {len(valid)} (跳过: 短页={skipped_types['short']}, "
           f"目录={skipped_types['toc']}, 版权={skipped_types['credits']})")
-    return valid
+    return valid, meta
 
 
 def create_windows(pages: list) -> list:
@@ -191,7 +228,7 @@ def create_windows(pages: list) -> list:
     step = WINDOW_SIZE - OVERLAP
     for i in range(0, len(pages), step):
         window = pages[i:i + WINDOW_SIZE]
-        if len(window) >= 3:  # 至少3页才有意义
+        if len(window) >= 3:
             windows.append(window)
     print(f"🪟 创建了 {len(windows)} 个滑动窗口 (大小={WINDOW_SIZE}, 重叠={OVERLAP})")
     return windows
@@ -206,34 +243,76 @@ def format_window_text(window: list) -> str:
 
 
 # ──────────────────────────────────────────────
-# 案例去重与合并
+# 案例去重与合并（V2 schema）
 # ──────────────────────────────────────────────
 
 def case_signature(case: dict) -> str:
-    """生成案例的唯一签名，用于去重"""
-    key = f"{case.get('page_start', 0)}_{case.get('title_en', '').lower()[:30]}"
+    """生成案例的唯一签名，用于去重。V2 使用 title + page_start"""
+    key = f"{case.get('page_start', 0)}_{case.get('title', '').lower()[:30]}"
     return hashlib.md5(key.encode()).hexdigest()[:12]
 
 
+def _merge_list_field(existing: dict, case: dict, field: str):
+    """合并列表字段：取并集，保持顺序，去重"""
+    a = existing.get(field, []) or []
+    b = case.get(field, []) or []
+    seen = set()
+    merged = []
+    for x in a + b:
+        # 列表元素可能是 str 或 dict（如 quotes）
+        key = json.dumps(x, sort_keys=True) if isinstance(x, dict) else str(x)
+        if key not in seen:
+            seen.add(key)
+            merged.append(x)
+    existing[field] = merged
+
+
+def _merge_quotes(existing: dict, case: dict):
+    """合并 quotes：按 text+page 去重"""
+    a = existing.get("quotes", []) or []
+    b = case.get("quotes", []) or []
+    seen = set()
+    merged = []
+    for q in a + b:
+        key = (q.get("text", ""), q.get("page"))
+        if key not in seen:
+            seen.add(key)
+            merged.append(q)
+    existing["quotes"] = merged
+
+
 def merge_cases(all_cases: list) -> list:
-    """合并来自不同窗口的重复案例"""
+    """合并来自不同窗口的重复案例。适配 V2 schema。"""
     seen = {}
     merged = []
 
     for case in all_cases:
         sig = case_signature(case)
         if sig in seen:
-            # 合并：扩展页码范围，保留更长的摘要
             existing = seen[sig]
-            existing["page_start"] = min(existing["page_start"], case.get("page_start", 999))
-            existing["page_end"] = max(existing["page_end"], case.get("page_end", 0))
-            # 如果新摘要更长，替换
-            if len(case.get("summary_en", "")) > len(existing.get("summary_en", "")):
-                existing["summary_en"] = case["summary_en"]
-                existing["summary_original"] = case.get("summary_original", "")
-            # 合并人物和公司列表
-            existing["characters"] = list(set(existing.get("characters", []) + case.get("characters", [])))
-            existing["companies"] = list(set(existing.get("companies", []) + case.get("companies", [])))
+
+            # 1. 扩展页码范围
+            existing["page_start"] = min(existing.get("page_start", 999), case.get("page_start", 999))
+            existing["page_end"] = max(existing.get("page_end", 0), case.get("page_end", 0))
+
+            # 2. 叙事字段：保留更长的
+            for field in V2_NARRATIVE_FIELDS:
+                new_val = case.get(field, "") or ""
+                old_val = existing.get(field, "") or ""
+                if len(new_val) > len(old_val):
+                    existing[field] = new_val
+
+            # 3. 列表字段：合并去重
+            for field in V2_LIST_FIELDS:
+                _merge_list_field(existing, case, field)
+
+            # 4. quotes 特殊处理（结构为 [{text, translation, speaker, page}]）
+            _merge_quotes(existing, case)
+
+            # 5. 标量字段：若已有则保留，否则取新值
+            for field in ("title", "when", "where", "original_language"):
+                if field not in existing or not existing.get(field):
+                    existing[field] = case.get(field)
         else:
             seen[sig] = case
             merged.append(case)
@@ -250,20 +329,16 @@ def process_book(input_path: str, output_path: str, book_id: str = None,
                  api_key: str = None, dry_run: bool = False):
     """处理一本书的完整流程"""
 
-    # 1. 加载
-    pages = load_book(input_path)
+    pages, meta = load_book(input_path)
     if not pages:
         print("❌ 没有有效页面")
         return
 
-    # 2. 创建窗口
     windows = create_windows(pages)
 
-    # 3. 自动生成 book_id
     if not book_id:
         book_id = hashlib.md5(input_path.encode()).hexdigest()[:16]
 
-    # 4. 逐窗口提取案例
     all_cases = []
     for i, window in enumerate(windows):
         page_range = f"{window[0]['page_index']}-{window[-1]['page_index']}"
@@ -279,12 +354,11 @@ def process_book(input_path: str, output_path: str, book_id: str = None,
         if cases:
             print(f"  ✅ 提取到 {len(cases)} 个案例")
             for c in cases:
-                c["_window"] = i  # 标记来源窗口（调试用）
+                c["_window"] = i
             all_cases.extend(cases)
         else:
             print("  ⚠️ 该窗口未提取到案例")
 
-        # 避免速率限制
         if i < len(windows) - 1:
             time.sleep(1)
 
@@ -292,25 +366,22 @@ def process_book(input_path: str, output_path: str, book_id: str = None,
         print(f"\n[DRY RUN] 共 {len(windows)} 个窗口待处理")
         return
 
-    # 5. 去重合并
     merged = merge_cases(all_cases)
 
-    # 6. 添加元数据并生成ID
     for i, case in enumerate(merged):
         case["case_id"] = f"{book_id}_{i+1:03d}"
         case["book_id"] = book_id
         case.pop("_window", None)
 
-    # 7. 构建输出
     output = {
         "book_id": book_id,
         "total_cases": len(merged),
         "extraction_date": time.strftime("%Y-%m-%d"),
         "source_pages_range": f"{pages[0]['page_index']}-{pages[-1]['page_index']}",
+        **meta,
         "cases": merged
     }
 
-    # 8. 保存
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
@@ -319,7 +390,7 @@ def process_book(input_path: str, output_path: str, book_id: str = None,
 
 
 def main():
-    parser = argparse.ArgumentParser(description="从书籍 JSON 中提取商业案例")
+    parser = argparse.ArgumentParser(description="从书籍 JSON 中提取商业案例（V2 schema）")
     parser.add_argument("--input", required=True, help="输入的 raw.json 文件路径")
     parser.add_argument("--output", required=True, help="输出的 cases.json 文件路径")
     parser.add_argument("--book-id", default=None, help="书籍ID（默认从文件名生成）")

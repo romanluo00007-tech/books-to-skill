@@ -118,7 +118,7 @@ data/
 ### 当前案例库
 
 已上线：
-- **Zero to One**（Peter Thiel）— 10 条案例
+- **Zero to One**（Peter Thiel）— 25 条案例，中英双语
 - **Elon Musk**（Walter Isaacson）— 12 条案例
 
 规划中：
@@ -272,7 +272,7 @@ After presenting cases, offer:
 ### Available case databases
 
 Currently available:
-- **Zero to One** by Peter Thiel — 10 cases
+- **Zero to One** by Peter Thiel — 25 cases (bilingual)
 - **Elon Musk** by Walter Isaacson — 12 cases
 
 Coming soon:
