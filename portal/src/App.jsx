@@ -389,6 +389,50 @@ function HomeContent() {
           </div>
         </section>
 
+        {/* 案例数据库 */}
+        <section style={{ marginBottom: 64 }}>
+          <p style={{ fontSize: 11, fontWeight: 600, color: "#2563eb", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>案例数据库</p>
+          <h2 style={{ fontSize: 22, fontWeight: 700, color: "#1c1917", marginBottom: 24 }}>来源可追溯的商业故事</h2>
+          <a
+            href="/case-library"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: 16,
+              padding: "24px 24px 24px 20px",
+              background: "#fff",
+              border: "1px solid #e7e5e4",
+              borderLeft: "4px solid #2563eb",
+              borderRadius: 12,
+              textDecoration: "none",
+              color: "inherit",
+              transition: "all 0.2s",
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.boxShadow = "0 8px 24px rgba(37,99,235,0.12)";
+              e.currentTarget.style.borderColor = "#2563eb40";
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.boxShadow = "none";
+              e.currentTarget.style.borderColor = "#e7e5e4";
+            }}
+          >
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ fontSize: 18, fontWeight: 600, color: "#1c1917", marginBottom: 6 }}>案例库</div>
+              <div style={{ fontSize: 14, color: "#57534e", lineHeight: 1.6 }}>
+                商业故事、人物传记等真实案例，每条可追溯到书籍与页码
+              </div>
+              <div style={{ fontSize: 12, color: "#a8a29e", marginTop: 8 }}>Zero to One · Elon Musk · 22 条案例</div>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, flexShrink: 0 }}>
+              <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#2563eb" }} />
+              <span style={{ fontSize: 14, fontWeight: 600, color: "#2563eb" }}>进入案例库 →</span>
+            </div>
+          </a>
+        </section>
+
         {/* 项目结构 */}
         <section style={{ marginBottom: 64 }}>
           <p style={{ fontSize: 11, fontWeight: 600, color: "#b45309", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>架构</p>
